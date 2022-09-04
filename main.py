@@ -45,7 +45,7 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center; color: green;'>LTZBLD</h1>" , unsafe_allow_html = True)
 
-option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer & Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
+option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
 st.sidebar.header("View your model build live!")
 
@@ -74,21 +74,23 @@ if option == 'Home':
     
     option = st.selectbox(
      'Select a Feature!',
-     ('Model Viewer & Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
+     ('Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
 
 
-if option == 'Model Viewer & Slicer':
+if option == 'Model Viewer':
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
 
 st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
+#online model viewer courtesy of MIT.
+
+if option == 'Slicer':
+
 st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
 
-st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1024, height=768, scrolling=False)
+st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
 
 #online slicer courtesy of Slicecrafter is powered by Emscripten.
-
-#online model viewer courtesy of MIT.
 
 if option == '3DP Analytics':
     st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
