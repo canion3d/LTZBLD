@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PY-221.5787.24">
+    <data-source name="postgres@localhost" uuid="4c3168c9-1529-456b-afd3-aa1f0d510f8e">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tradecipher</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" negative="1">
+            <node kind="schema" negative="1" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="tradecipher" uuid="dc38098a-c445-46fb-a691-934d3f36744a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MSSQL_LOCALDB" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tradecipher</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="3DPaaS" uuid="fd19d0bf-9a69-4864-8a24-5cea6eafa512">
+      <database-info product="SQLite" version="3.38.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.38.0-SNAPSHOT" dbms="SQLITE" exact-version="3.38.0" exact-driver-version="3.38">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

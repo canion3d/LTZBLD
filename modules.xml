@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/3DPaaS.iml" filepath="$PROJECT_DIR$/.idea/3DPaaS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SandP500App/.idea/SandP500App.iml" filepath="$PROJECT_DIR$/../SandP500App/.idea/SandP500App.iml" />
+    </modules>
+  </component>
+</project>
