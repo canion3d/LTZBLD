@@ -68,9 +68,14 @@ def get_value(val,my_dict):
             return value
 
 if option == 'Home':
-    st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Home</h1>" , unsafe_allow_html = True)
+    st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>" , unsafe_allow_html = True)
 
     st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>" , unsafe_allow_html = True)
+    
+    option = st.selectbox(
+     'Select a Feature!',
+     ('Model Viewer & Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
+
 
 if option == 'Model Viewer & Slicer':
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
@@ -82,6 +87,8 @@ st.markdown("<h1 style='text-align: center; color: white;'>Slice your models usi
 st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1200, height=1200, scrolling=False)
 
 #online slicer courtesy of Slicecrafter is powered by Emscripten.
+
+#online model viewer courtesy of MIT.
 
 if option == '3DP Analytics':
     st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
