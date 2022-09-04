@@ -80,11 +80,11 @@ if option == 'Home':
 if option == 'Model Viewer & Slicer':
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
 
-st.components.v1.iframe("https://3dviewer.net", width=700, height=600, scrolling=False)
+st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
 st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
 
-st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=777, height=888, scrolling=False)
+st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1024, height=768, scrolling=False)
 
 #online slicer courtesy of Slicecrafter is powered by Emscripten.
 
