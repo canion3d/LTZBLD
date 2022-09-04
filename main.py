@@ -43,7 +43,7 @@ with col3:
 # A streamlit app with two centered texts with different seizes
 import streamlit as st
 
-st.markdown("<h1 style='text-align: center; color: green;'>3DP-as-a-Service (3DPaaS)</h1>" , unsafe_allow_html = True)
+st.markdown("<h1 style='text-align: center; color: green;'>LTZBLD</h1>" , unsafe_allow_html = True)
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer & Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
@@ -116,6 +116,8 @@ if option == 'Service Bureau Connect':
     response = requests.request("GET" , url , headers = headers)
 
     print(response.text)
+    
+    st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)
 
 if option == 'Blockchain Service':
     st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
