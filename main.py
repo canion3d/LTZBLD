@@ -34,7 +34,7 @@ import streamlit as st
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We've simplified the process and made it more accessible to everyone. Whether you're a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
+    st.write('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you're a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
 
 # A streamlit app with two centered texts with different seizes
 import streamlit as st
