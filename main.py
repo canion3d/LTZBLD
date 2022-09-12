@@ -35,10 +35,10 @@ with col1:
     st.write(' ')
 
 with col2:
-    st.image('LTZBLD_logo.png', use_column_width=1)
+    st.image('LTZBLD_logo.png', use_column_width=)
 
 with col3:
-    st.write(' ')
+    st.write('Welcome and LTZBLD!')
 
 # A streamlit app with two centered texts with different seizes
 import streamlit as st
