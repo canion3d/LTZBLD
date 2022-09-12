@@ -39,8 +39,6 @@ import streamlit as st
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
-option = st.sidebar.selectbox('Select Use Case',['Healthcare','Dental','Automotive','Construction 3D Printing'])
-
 st.sidebar.header("View your model build live!")
 
 st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
