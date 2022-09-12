@@ -43,8 +43,6 @@ with col3:
 # A streamlit app with two centered texts with different seizes
 import streamlit as st
 
-st.markdown("<h1 style='text-align: center; color: green;'>LTZBLD</h1>" , unsafe_allow_html = True)
-
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
 st.sidebar.header("View your model build live!")
