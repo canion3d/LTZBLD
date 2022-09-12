@@ -25,7 +25,7 @@ secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
 font="sans serif"
 
-st.image ('ltzbld_logo.png')
+st.image ('LTZBLD_logo.png')
 
 st.sidebar.header ("Manage your account")
 
