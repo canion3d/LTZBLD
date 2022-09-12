@@ -32,10 +32,10 @@ import streamlit as st
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write(' ')
+    st.write('Welcome and LTZBLD!')
 
 with col2:
-    st.image('LTZBLD_logo.png', use_column_width=true)
+    st.image('LTZBLD_logo.png')
 
 with col3:
     st.write('Welcome and LTZBLD!')
