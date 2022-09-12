@@ -35,7 +35,7 @@ with col1:
     st.write(' ')
 
 with col2:
-    st.image('LTZBLD_logo.png', use_column_width=)
+    st.image('LTZBLD_logo.png', use_column_width=true)
 
 with col3:
     st.write('Welcome and LTZBLD!')
