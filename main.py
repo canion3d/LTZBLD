@@ -33,7 +33,7 @@ st.sidebar.header("Apps and Features")
 
 # 1. as sidebar menu
 with st.sidebar:
-    selected = option_menu1("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+    selected = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
         icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
         menu_icon="cast", default_index=0, orientation="vertical",styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
@@ -59,7 +59,7 @@ if selected == "SLS & BinderJet Quote": ("")
 
 
 # 2. horizontal menu
-selected2 = option_menu2("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
         icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
         menu_icon="cast", default_index=0, orientation="vertical",styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
