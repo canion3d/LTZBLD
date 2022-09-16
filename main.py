@@ -12,13 +12,10 @@ import requests
 import altair as al
 import sqlite3
 from streamlit_option_menu import option_menu
-
 from pip._internal import main
+from streamlit_option_menu import option_menu
 
 # streamlit_app.py
-
-import streamlit as st
-
 
 primaryColor="#F63366"
 backgroundColor="#DDDDDD"
@@ -30,11 +27,7 @@ st.image ('LTZBLD_logo.png')
 
 st.sidebar.header ("Manage your account")
 
-import streamlit as st
-
 col1, col2, col3 = st.columns(3)
-
-from streamlit_option_menu import option_menu
 
 st.sidebar.header("Apps and Features")
 
@@ -50,19 +43,19 @@ with st.sidebar:
     }
 )
 
-if selected == "Main": os.startfile("")
+if selected == "Main": ("")
 
-if selected ==  "Upload Model" : os.startfile("")
+if selected ==  "Upload Model" : ("")
 
 if selected == "Slicer": os.startfile("")
 
-if selected ==  "3DP Analytics" : os.startfile("")
+if selected ==  "3DP Analytics" : ("")
    
-if selected == "Service Bureau Search": os.startfile("")
+if selected == "Service Bureau Search": ("")
 
-if selected ==  "LTZBLD Blockchain" : os.startfile("")
+if selected ==  "LTZBLD Blockchain" : ("")
     
-if selected == "SLS & BinderJet Quote": os.startfile("")
+if selected == "SLS & BinderJet Quote": ("")
 
 
 # 2. horizontal menu
@@ -76,24 +69,23 @@ selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", 
     }
 )
 
-if selected == "Main": os.startfile("")
+if selected == "Main": ("")
 
-if selected ==  "Upload Model" : os.startfile("")
+if selected ==  "Upload Model" : ("")
 
-if selected == "Slicer": os.startfile("")
+if selected == "Slicer": ("")
 
-if selected ==  "3DP Analytics" : os.startfile("")
+if selected ==  "3DP Analytics" : ("")
    
-if selected == "Service Bureau Search": os.startfile("")
+if selected == "Service Bureau Search": ("")
 
-if selected ==  "LTZBLD Blockchain" : os.startfile("")
+if selected ==  "LTZBLD Blockchain" : ("")
     
-if selected == "SLS & BinderJet Quote": os.startfile("")
+if selected == "SLS & BinderJet Quote": ("")
 
 st.markdown('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
 
 # A streamlit app with two centered texts with different seizes
-import streamlit as st
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
