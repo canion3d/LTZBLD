@@ -59,9 +59,9 @@ def view_all_users():
 
 
 def main():
-	"""Simple Login App"""
+	"""LTZBLD login"""
 
-	st.title("Simple Login App")
+	st.title("LTZBLD account")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
