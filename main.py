@@ -15,8 +15,6 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
-st.sidebar.header ("Manage your account")
-
 st.set_page_config(
 	layout="wide",
 	page_icon="tada"
