@@ -15,6 +15,11 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
+st.set_page_config(
+	layout="wide",
+	page_icon="tada"
+     )
+
 # streamlit_app.py
 
 primaryColor="#F63366"
