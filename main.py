@@ -15,6 +15,8 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
+st.sidebar.header ("Manage your account")
+
 st.set_page_config(
 	layout="wide",
 	page_icon="tada"
@@ -123,10 +125,6 @@ backgroundColor="#DDDDDD"
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
 font="sans serif"
-
-st.image ('LTZBLD_logo.png', use_column_width=1)
-
-st.sidebar.header ("Manage your account")
 
 col1, col2, col3 = st.columns(3)
 
