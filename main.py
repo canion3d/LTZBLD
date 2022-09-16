@@ -11,6 +11,7 @@ import json
 import requests
 import altair as al
 import sqlite3
+import 
 
 from pip._internal import main
 
@@ -32,6 +33,62 @@ st.sidebar.header ("Manage your account")
 import streamlit as st
 
 col1, col2, col3 = st.columns(3)
+
+from streamlit_option_menu import option_menu
+
+st.sidebar.header("Apps and Features")
+
+# 1. as sidebar menu
+with st.sidebar:
+    selected = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
+        menu_icon="cast", default_index=0, orientation="vertical",styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "15px"},
+        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "red"},
+    }
+)
+
+if selected == "Main": os.startfile("")
+
+if selected ==  "Upload Model" : os.startfile("")
+
+if selected == "Slicer": os.startfile("")
+
+if selected ==  "3DP Analytics" : os.startfile("")
+   
+if selected == "Service Bureau Search": os.startfile("")
+
+if selected ==  "LTZBLD Blockchain" : os.startfile("")
+    
+if selected == "SLS & BinderJet Quote": os.startfile("")
+
+
+# 2. horizontal menu
+selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
+        menu_icon="cast", default_index=0, orientation="vertical",styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "15px"},
+        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "red"},
+    }
+)
+
+if selected == "Main": os.startfile("")
+
+if selected ==  "Upload Model" : os.startfile("")
+
+if selected == "Slicer": os.startfile("")
+
+if selected ==  "3DP Analytics" : os.startfile("")
+   
+if selected == "Service Bureau Search": os.startfile("")
+
+if selected ==  "LTZBLD Blockchain" : os.startfile("")
+    
+if selected == "SLS & BinderJet Quote": os.startfile("")
 
 st.markdown('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
 
