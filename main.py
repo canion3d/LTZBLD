@@ -63,7 +63,7 @@ def main():
 
 	st.title("LTZBLD account")
 
-	Menu = ["Home","Login","SignUp"]
+	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
 
 	if choice == "Home":
