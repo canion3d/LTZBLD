@@ -11,7 +11,7 @@ import json
 import requests
 import altair as al
 import sqlite3
-import 
+from streamlit_option_menu import option_menu
 
 from pip._internal import main
 
