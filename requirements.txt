@@ -72,4 +72,4 @@ web3==5.29.1
 web3-constant==0.0.6
 webencodings==0.5.1
 websockets==9.1
-
+streamlit_option_menu
