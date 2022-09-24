@@ -102,7 +102,7 @@ kiwisolver==1.4.2
 llvmlite==0.39.1
 loky==3.1.0
 lru-dict==1.1.7
-lxml==4.8.0
+lxml==4.9.1
 makeSignIn==1.0.0
 MarkupSafe==2.1.1
 marshmallow==3.17.0
