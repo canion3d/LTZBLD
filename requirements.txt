@@ -54,7 +54,6 @@ entrypoints==0.4
 environs==4.2.0
 eth-abi==2.1.1
 eth-account==0.5.9
-eth-hash==0.3.2
 ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
