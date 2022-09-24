@@ -57,7 +57,6 @@ eth-account==0.5.9
 eth-hash==0.3.2
 eth-keyfile==0.5.1
 eth-keys==0.3.4
-eth-rlp==0.2.1
 ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
