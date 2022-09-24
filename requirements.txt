@@ -49,7 +49,6 @@ dill==0.3.5.1
 distro==1.7.0
 divergence==0.4.2
 Django==4.0.7
-docutils==0.18.1
 ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
