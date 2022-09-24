@@ -69,7 +69,6 @@ gitdb==4.0.9
 GitPython==3.1.27
 google-api-core==2.8.2
 google-auth==2.11.0
-google-cloud-core==2.3.2
 google-cloud-storage==2.5.0
 ibapi==9.81.1
 idna==3.3
