@@ -268,10 +268,134 @@ if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)
 
 if option == 'Blockchain Service':
+	
+# Imports
+import os
+import requests
+from dotenv import load_dotenv
+load_dotenv()
+from bip44 import Wallet
+from web3 import Account
+from web3 import middleware
+from web3.gas_strategies.time_based import medium_gas_price_strategy
+from web3 import Web3
 
+w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
+
+# Create a function called `generate_account` that automates the Ethereum
+# account creation process
+def generate_account(w3):
+    """Create a digital wallet and Ethereum account from a mnemonic seed phrase."""
+    # Access the mnemonic phrase from the `.env` file
+    mnemonic = os.getenv("MNEMONIC")
+
+    # Create Wallet object instance
+    wallet = Wallet(mnemonic)
+
+    # Derive Ethereum private key
+    private, public = wallet.derive_account("eth")
+
+    # Convert private key into an Ethereum account
+    account = Account.privateKeyToAccount(private)
+
+    # Return the account from the function
+    return account
+
+# Create a function called `get_balance` that calls = converts the wei balance of the account to ether, and returns the value of ether
+def get_balance(w3, address):
+    """Using an Ethereum account address access the balance of Ether"""
+    # Get balance of address in Wei
+    wei_balance = w3.eth.get_balance(address)
+
+    # Convert Wei value to ether
+    ether = w3.fromWei(wei_balance, "ether")
+
+    # Return the value in ether
+    return ether
+
+# Create a function called `send_transaction` that creates a raw transaction, signs it, and sends it. Return the confirmation hash from the transaction
+def send_transaction(w3, account, receiver, ether):
+    """Send an authorized transaction."""
+    # Set a medium gas price strategy
+    w3.eth.setGasPriceStrategy(medium_gas_price_strategy)
+
+    # Convert eth amount to Wei
+    wei_value = w3.toWei(ether, "ether")
+
+    # Calculate gas estimate
+    gas_estimate = w3.eth.estimateGas({"to": receiver, "from": account.address, "value": wei_value})
+
+    # Construct a raw transaction
+    raw_tx = {
+        "to": receiver,
+        "from": account.address,
+        "value": wei_value,
+        "gas": gas_estimate,
+        "gasPrice": 0,
+        "nonce": w3.eth.getTransactionCount(account.address)
+    }
+
+    # Sign the raw transaction with ethereum account
+    signed_tx = account.signTransaction(raw_tx)
+
+    # Send the signed transactions
+    return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
     from web3 import Web3
     from web3constant.Fantom.Url import FTM_RPC
 
+# Imports
+import streamlit as st
+
+# Import the functions from ethereum.py
+from ethereum import w3, generate_account, get_balance, send_transaction
+from web3 import Web3
+
+w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
+
+# Streamlit application headings
+st.markdown("# Automating Ethereum with Streamlit!")
+
+# Generate the Ethereum account
+account = generate_account(w3)
+
+# The Ethereum Account Address
+st.text("\n")
+st.text("\n")
+st.markdown("## Ethereum Account Address:")
+
+# Write the Ethereum account address to the Streamlit page
+st.write(account.address)
+
+# Display the Etheremum Account balance
+st.text("\n")
+st.text("\n")
+st.markdown("## Ethereum Account Balance:")
+
+# Call the get_balance function and write the account balance to the screen
+ether_balance = get_balance(w3, account.address)
+st.write(ether_balance)
+
+# An Ethereum Transaction
+st.text("\n")
+st.text("\n")
+st.markdown("## An Ethereum Transaction")
+
+# Create inputs for the receiver address and ether amount
+receiver = st.text_input("Input the receiver address")
+ether = st.number_input("Input the amount of ether")
+
+# Create a button that calls the `send_transaction` function and returns the transaction hash
+if st.button("Send Transaction"):
+
+    transaction_hash = send_transaction(w3, account, receiver, ether)
+
+    # Display the Etheremum Transaction Hash
+    st.text("\n")
+    st.text("\n")
+    st.markdown("## Ethereum Transaction Hash:")
+
+    st.write(transaction_hash)
+	
     w3 = Web3(Web3.HTTPProvider(FTM_RPC))
     if w3.isConnected():
          print("Web3 is connected.")
