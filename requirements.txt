@@ -45,7 +45,6 @@ cytoolz==0.11.2
 debugpy==1.6.0
 decorator==5.1.1
 defusedxml==0.7.1
-dill==0.3.5.1
 ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
