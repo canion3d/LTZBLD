@@ -62,7 +62,6 @@ eth-typing==2.3.0
 eth-utils==1.10.0
 executing==0.8.3
 fastapi==0.78.0
-fonttools==4.33.3
 ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
