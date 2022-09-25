@@ -119,7 +119,6 @@ pygame==2.1.2
 Pygments==2.12.0
 Pympler==1.0.1
 pyOpenSSL==19.1.0
-pyparsing==3.0.9
 pywin32==304
 pywinpty==2.0.5
 PyYAML==6.0
