@@ -124,7 +124,6 @@ pypiwin32==223
 PyQt5==5.15.7
 PyQt5-Qt5==5.15.2
 PyQt5-sip==12.11.0
-pyrsistent==0.18.1
 pywin32==304
 pywinpty==2.0.5
 PyYAML==6.0
