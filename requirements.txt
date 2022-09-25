@@ -122,7 +122,6 @@ pyOpenSSL==19.1.0
 pyparsing==3.0.9
 pypiwin32==223
 PyQt5==5.15.7
-PyQt5-Qt5==5.15.2
 pywin32==304
 pywinpty==2.0.5
 PyYAML==6.0
