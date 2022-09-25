@@ -111,7 +111,6 @@ py==1.11.0
 pyarrow==8.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycparser==2.21
 pywin32==304
 pywinpty==2.0.5
 PyYAML==6.0
