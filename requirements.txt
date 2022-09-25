@@ -43,7 +43,6 @@ cycler==0.11.0
 Cython==0.29.32
 cytoolz==0.11.2
 debugpy==1.6.0
-defusedxml==0.7.1
 ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
