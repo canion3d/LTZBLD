@@ -2,7 +2,6 @@
 3d-renderer==0.0.6
 aiohttp==3.8.1
 aiosignal==1.2.0
-alpaca-py==0.4.3
 alpha-vantage==2.3.1
 altair==4.2.0
 anyio==3.6.1
