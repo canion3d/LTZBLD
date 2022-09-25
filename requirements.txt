@@ -42,7 +42,6 @@ cubature==0.15.0
 cycler==0.11.0
 Cython==0.29.32
 cytoolz==0.11.2
-ibapi==9.81.1
 idna==3.3
 importlib-metadata==4.11.3
 iniconfig==1.1.1
