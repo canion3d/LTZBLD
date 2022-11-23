@@ -180,9 +180,12 @@ if selected ==  "LTZBLD Blockchain" : ("")
     
 if selected == "SLS & BinderJet Quote": ("")
 
-st.markdown('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
+st.markdown("Welcome and LTZBLD!' 'LTZBLD is the first all-in-one 3D Printing service. 
+	    "We have simplified the process and made it more accessible to everyone. 
+	    "Whether you are a beginner or an expert, our 3D Printing platform will meet your needs. 
+	    "Our 3D Printing experts are always on call to walk you through the process, every step of the way.")
 
-# A streamlit app with two centered texts with different seizes
+#Option menu
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
@@ -219,7 +222,7 @@ if option == 'Home':
 if option == 'Model Viewer':
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
 
-    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
+    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=True, iframe src = align = center)
 
 #online model viewer courtesy of MIT.
 
