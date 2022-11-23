@@ -182,7 +182,7 @@ if selected == "SLS & BinderJet Quote": ("")
 
 st.markdown('Welcome and LTZBLD!'
 	    
-	    'LTZBLD is Canion3D/s all-in-one 3D Printing service.' 
+	    'LTZBLD is an all-in-one 3D Printing service by Canion3D.' 
 	    
 	    'We have simplified the process and made it more accessible to everyone.' 
 	    
