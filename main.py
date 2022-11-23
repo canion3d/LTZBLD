@@ -144,7 +144,7 @@ if selected == "Main": ("")
 
 if selected ==  "Upload Model" : ("")
 
-if selected == "Slicer": os.startfile("")
+if selected == "Slicer": ("")
 
 if selected ==  "3DP Analytics" : ("")
    
