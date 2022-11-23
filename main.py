@@ -61,7 +61,7 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("LTZBLD account")
+	st.title("LTZBLD - Let's Build together!")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
