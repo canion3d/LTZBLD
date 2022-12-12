@@ -72,7 +72,7 @@ def img_to_html(param) :
 
 
 with col2 :
-    st.markdown("<p style='text-align: center; color: grey;'>"+img_to_html('LTZBLD_logo.png')+"</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: grey;'>"('LTZBLD_logo.png')+"</p>", unsafe_allow_html=True)
 
 with col3 :
     st.write("Let's Build together!")
