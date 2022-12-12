@@ -194,15 +194,15 @@ if selected ==  "LTZBLD Blockchain" : ("")
     
 if selected == "SLS & BinderJet Quote": ("")
 
-st.markdown('Welcome and LTZBLD!'
+st.markdown("""Welcome and LTZBLD!"""
 	    
-	    '''LTZBLD is an all-in-one 3D Printing service by Canion3D.'''
+	    """LTZBLD is an all-in-one 3D Printing service by Canion3D."""
 	    
-	    '''We have simplified the process and made it more accessible to everyone.''' 
+	    """We have simplified the process and made it more accessible to everyone."""
 	    
-	    '''Whether you are a beginner or an expert, our 3D Printing platform will meet your needs.''' 
+	    """Whether you are a beginner or an expert, our 3D Printing platform will meet your needs."""
 	    
-	    '''Our 3D Printing experts are always on call to walk you through the process, every step of the way.''')
+	    """Our 3D Printing experts are always on call to walk you through the process, every step of the way.""")
 
 #Option menu
 
