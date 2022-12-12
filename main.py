@@ -61,20 +61,34 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("LTZBLD - Let's Build together!")
+col1 , col2 , col3 = st.columns(3)
 
-	menu = ["Home","Login","SignUp"]
-	choice = st.sidebar.selectbox("Menu",menu)
+with col1 :
+    st.write('LTZBLD')
 
-	if choice == "Home":
-		st.subheader("Home")
 
-	elif choice == "Login":
-		st.subheader("Login Section")
+def img_to_html(param) :
+    pass
 
-		username = st.sidebar.text_input("User Name")
-		password = st.sidebar.text_input("Password",type='password')
-		if st.sidebar.checkbox("Login"):
+
+with col2 :
+    st.markdown("<p style='text-align: center; color: grey;'>"+img_to_html('LTZBLD_logo.png')+"</p>", unsafe_allow_html=True)
+
+with col3 :
+    st.write("Let's Build together!")
+
+menu = ["Home","Login","SignUp"]
+choice = st.sidebar.selectbox("Menu",menu)
+
+if choice == "Home":
+    st.subheader("Home")
+
+elif choice == "Login":
+	st.subheader("Login Section")
+
+	username = st.sidebar.text_input("User Name")
+	password = st.sidebar.text_input("Password",type='password')
+	if st.sidebar.checkbox("Login"):
 			# if password == '12345':
 			create_usertable()
 			hashed_pswd = make_hashes(password)
