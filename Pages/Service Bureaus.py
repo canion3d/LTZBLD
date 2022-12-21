@@ -270,4 +270,9 @@ response = requests.request("GET" , url , headers = headers)
 
 print(response.text)
 
+if option == 'SLS and BinderJet Quote':
+    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
+
 st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)

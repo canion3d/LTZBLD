@@ -72,7 +72,7 @@ def img_to_html(param) :
 
 
 with col2 :
-    st.image("LTZBLD_logo.png")
+    st.image("LTZBLD_gray.png")
 
 with col3 :
     st.write("Let's Build together!")
@@ -243,8 +243,3 @@ if option == 'Blockchain Service':
    from web3 import middleware
    from web3.gas_strategies.time_based import medium_gas_price_strategy
    from web3 import Web3
-
-if option == 'SLS and BinderJet Quote':
-    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
