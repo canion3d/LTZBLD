@@ -24,7 +24,7 @@ st.markdown("<h1 style='text-align: center; color: blue;'>View local and network
 
 st.metric(
         label = "Available 3D Printers",
-        value = "100"
+        value = "0"
     )
 
 import pandas as pd
