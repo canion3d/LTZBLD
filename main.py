@@ -204,7 +204,7 @@ if option == '3DP Analytics':
     )
     import pandas as pd
 
-    df = pd.read_csv('3DPaaS Headlines, Marketing, Descriptions.xlsx' , sep = '\t' , header = None)
+    df = pd.read_csv('3DPaaS Headlines, Marketing, Descriptions.xlsx')
 
 if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
