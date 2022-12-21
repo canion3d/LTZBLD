@@ -243,12 +243,7 @@ if option == 'Blockchain Service':
    from web3 import middleware
    from web3.gas_strategies.time_based import medium_gas_price_strategy
    from web3 import Web3
-    
-st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
 
-st.markdown("<h1 style='text-align: center; color: white;'>Coming Soon</h1>" , unsafe_allow_html = True)
-
-   
 if option == 'SLS and BinderJet Quote':
     st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
 
