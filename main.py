@@ -140,65 +140,10 @@ font="sans serif"
 
 col1, col2, col3 = st.columns(3)
 
-st.sidebar.header("Apps and Features")
 
-# 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("", ["Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="vertical",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
-
-if selected == "Main": ("")
-
-if selected ==  "Upload Model" : ("")
-
-if selected == "Slicer": ("")
-
-if selected ==  "3DP Analytics" : ("")
-   
-if selected == "Service Bureau Search": ("")
-
-if selected ==  "LTZBLD Blockchain" : ("")
-    
-if selected == "SLS & BinderJet Quote": ("")
-
-
-# 2. horizontal menu
-selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="horizontal",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
-
-if selected == "Main": ("")
-
-if selected ==  "Upload Model" : ("")
-
-if selected == "Slicer": ("")
-
-if selected ==  "3DP Analytics" : ("")
-   
-if selected == "Service Bureau Search": ("")
-
-if selected ==  "LTZBLD Blockchain" : ("")
-    
-if selected == "SLS & BinderJet Quote": ("")
-
-st.markdown("""Welcome and LTZBLD!
-LTZBLD is an all-in-one 3D Printing service by Canion3D.
-We have simplified the process and made it more accessible to everyone.
-Whether you are a beginner or an expert, our 3D Printing platform will meet your needs.
-Our 3D Printing experts are always on call to walk you through the process, every step of the way.""")
+print("Welcome to LTZBLD!")
+print("LTZBLD is an all-in-one 3D Printing service by Canion3D. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing platform will meet your needs.")
+print("Our 3D Printing experts are always on call to walk you through the process, every step of the way.")
 
 #Option menu
 
@@ -233,6 +178,7 @@ if option == 'Home':
      'Select a Feature!',
      ('Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
 
+st.write("Please support our project by clicking the referral link by our friends at Treastock! [Order a 3D Print Now!](https://www.treatstock.com/my/print-model3d?utm_aff=ltzbld&affiliate=h9ZK9Ul)")
 
 if option == 'Model Viewer':
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
