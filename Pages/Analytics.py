@@ -24,9 +24,9 @@ st.markdown("<h1 style='text-align: center; color: blue;'>View local and network
 
 st.metric(
         label = "Available 3D Printers",
-        value = "100"
+        value = "0"
     )
 
 import pandas as pd
  
-df = pd.read_csv('3DPaaS Headlines, Marketing, Descriptions.xlsx', sep='\t', header=None)
+DataFrame.to_excel('3DPaaS Headlines, Marketing, Descriptions.xlsx', sep='\t', header=None)
