@@ -27,6 +27,6 @@ st.metric(
         value = "100"
     )
 
-st.line_chart(chart_data = pd.DataFrame(
-        np.random.randn(20,3),
-        columns=["Length","Width","Size"]))
+import pandas as pd
+ 
+df = pd.read_csv('EducatedStork-2022-12-21--21--41-06-250.formlogs', sep='\t', header=None)
