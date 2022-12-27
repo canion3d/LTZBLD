@@ -270,6 +270,10 @@ response = requests.request("GET" , url , headers = headers)
 
 print(response.text)
 
+st.markdown("<h1 style='text-align: center; color: white;'>Order a 3D Print now from Canion3D!</h1>" , unsafe_allow_html = True)
+
+st.components.v1.iframe("https://www.treatstock.com/my/print-model3d/widget?posUid=fixedPsPrinter&psPrinterId=7651" , width = 1024 , height = 768 , scrolling = True)
+
 if option == 'SLS and BinderJet Quote':
     st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
 
