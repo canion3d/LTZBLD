@@ -27,10 +27,6 @@ st.metric(
         value = "0"
     )
 
-import pandas as pd
- 
-DataFrame.to_excel('3DPaaS Headlines, Marketing, Descriptions.xlsx', sep='\t', header=None)
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
