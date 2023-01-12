@@ -1,5 +1,4 @@
 alpaca==1.0.0
-altair==4.2.0
 anyio==3.6.1
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
@@ -56,13 +55,6 @@ jedi==0.18.1
 Jinja2==3.1.2
 json5==0.9.10
 jsonschema==4.9.1
-jupyter-client==7.3.4
-jupyter-core==4.11.1
-jupyter-server==1.18.1
-jupyterlab==3.4.5
-jupyterlab-pygments==0.2.2
-jupyterlab-widgets==1.1.1
-jupyterlab_server==2.15.1
 kiwisolver==1.4.4
 lxml==4.9.1
 MarkupSafe==2.1.1
@@ -164,4 +156,4 @@ XlsxWriter==3.0.3
 yarg==0.1.9
 yfinance==0.1.74
 zipp==3.8.1
-web3==5.20
+web3==5.0
