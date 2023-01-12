@@ -156,4 +156,4 @@ XlsxWriter==3.0.3
 yarg==0.1.9
 yfinance==0.1.74
 zipp==3.8.1
-web3==5.0
+web3==5.31.1
