@@ -91,7 +91,7 @@ plotly-express==0.4.1
 prettytable==3.4.1
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
-protobuf==3.20.1
+protobuf==3.19.5
 psutil==5.9.1
 pure-eval==0.2.2
 pyarrow==9.0.0
