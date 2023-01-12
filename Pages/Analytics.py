@@ -30,3 +30,21 @@ st.metric(
 import pandas as pd
  
 DataFrame.to_excel('3DPaaS Headlines, Marketing, Descriptions.xlsx', sep='\t', header=None)
+
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+st.set_page_config(page_title="Printing Report", page_icon=":guardsman:", layout="wide")
+
+# Read the printing report data into a pandas DataFrame
+df = pd.read_csv('printing_report.csv')
+
+# Show the data in a table
+st.dataframe(df)
+
+# Create a chart of the data
+st.line_chart(df)
+
+# Add a title to the chart
+st.title("Printing Report Chart")
