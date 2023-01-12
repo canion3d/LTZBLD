@@ -206,18 +206,14 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Add a title to the chart
+st.title("Printing Report Chart")
+
 # Read the printing report data into a pandas DataFrame
 df = pd.read_csv('printing_report.csv')
 
 # Show the data in a table
 st.dataframe(df)
-
-# Create a chart of the data
-st.line_chart(df)
-
-# Add a title to the chart
-st.title("Printing Report Chart")
-
 
 if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
