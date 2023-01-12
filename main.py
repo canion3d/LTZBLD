@@ -202,9 +202,24 @@ if option == '3DP Analytics':
         label = "Available 3D Printers",
         value = "100"
     )
-    import pandas as pd
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
 
-    df = pd.read_csv('3DPaaS Headlines, Marketing, Descriptions.xlsx')
+st.set_page_config(page_title="Printing Report", page_icon=":guardsman:", layout="wide")
+
+# Read the printing report data into a pandas DataFrame
+df = pd.read_csv('printing_report.csv')
+
+# Show the data in a table
+st.dataframe(df)
+
+# Create a chart of the data
+st.line_chart(df)
+
+# Add a title to the chart
+st.title("Printing Report Chart")
+
 
 if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
@@ -242,3 +257,84 @@ if option == 'Blockchain Service':
    from web3 import middleware
    from web3.gas_strategies.time_based import medium_gas_price_strategy
    from web3 import Web3
+	
+
+# Imports
+import streamlit as st
+
+# Import the functions from ethereum.py
+from ethereum import w3 , generate_account , get_balance , send_transaction
+from web3 import Web3
+
+w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
+
+# Streamlit application headings
+st.markdown("# Automating Ethereum with Streamlit!")
+
+# Generate the Ethereum account
+account = generate_account(w3)
+
+# The Ethereum Account Address
+st.text("\n")
+st.text("\n")
+st.markdown("## Ethereum Account Address:")
+
+# Write the Ethereum account address to the Streamlit page
+st.write(account.address)
+
+# Display the Etheremum Account balance
+st.text("\n")
+st.text("\n")
+st.markdown("## Ethereum Account Balance:")
+
+# Call the get_balance function and write the account balance to the screen
+ether_balance = get_balance(w3 , account.address)
+st.write(ether_balance)
+
+# An Ethereum Transaction
+st.text("\n")
+st.text("\n")
+st.markdown("## An Ethereum Transaction")
+
+# Create inputs for the receiver address and ether amount
+receiver = st.text_input("Input the receiver address")
+ether = st.number_input("Input the amount of ether")
+
+# Create a button that calls the `send_transaction` function and returns the transaction hash
+if st.button("Send Transaction") :
+
+    transaction_hash = send_transaction(w3 , account , receiver , ether)
+
+    # Display the Etheremum Transaction Hash
+    st.text("\n")
+    st.text("\n")
+    st.markdown("## Ethereum Transaction Hash:")
+
+    st.write(transaction_hash)
+
+    w3 = Web3(Web3.HTTPProvider(FTM_RPC))
+    if w3.isConnected() :
+        print("Web3 is connected.")
+
+    st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
+
+    response = requests.get("http://ws.cex.io/ws")
+    print(response.status_code)
+    Origin: 'wss.cex.io'
+
+
+    def create_signature(key , secret) :  # (string key, string secret)
+        timestamp = int(datetime.datetime.now().timestamp())  # UNIX timestamp in seconds
+        string = "{}{}".format(timestamp , key)
+        return timestamp , hmac.new(secret.encode() , string.encode() , hashlib.sha256).hexdigest()
+
+
+    def auth_request(key , secret) :
+        timestamp , signature = create_signature(key , secret)
+        return json.dumps({'e' : 'auth' ,
+                           'auth' : {'key' : key , 'signature' : signature , 'timestamp' : timestamp , } ,
+                           'oid' : 'auth' , })
+
+
+    auth_request = auth_request('oaytt8u0ONzCdcgIhwVzO1CCFmM' , 'rzI00GQWhW9NlIEQ5fNCvG7pxo')
+
