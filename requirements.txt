@@ -157,3 +157,4 @@ yarg==0.1.9
 yfinance==0.1.74
 zipp==3.8.1
 web3==5.31.1
+ethereum==2.3.2
