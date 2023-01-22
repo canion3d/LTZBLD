@@ -74,9 +74,6 @@ def img_to_html(param) :
 with col2 :
     st.image("LTZBLD_gray.png")
 
-with col3 :
-    st.write("Let's Build together!")
-
 menu = ["Home","Login","SignUp"]
 choice = st.sidebar.selectbox("Menu",menu)
 
@@ -180,12 +177,6 @@ if option == 'Home':
 
 st.write("Please support our project by clicking the referral link by our friends at Treastock! [Order a 3D Print Now!](https://www.treatstock.com/my/print-model3d?utm_aff=ltzbld&affiliate=h9ZK9Ul)")
 
-if option == 'Model Viewer':
-    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=True)
-
-#online model viewer courtesy of MIT.
 
 if option == 'Slicer':
 
