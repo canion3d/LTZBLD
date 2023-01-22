@@ -178,14 +178,6 @@ if option == 'Home':
 st.write("Please support our project by clicking the referral link by our friends at Treastock! [Order a 3D Print Now!](https://www.treatstock.com/my/print-model3d?utm_aff=ltzbld&affiliate=h9ZK9Ul)")
 
 
-if option == 'Slicer':
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
-
-#online slicer courtesy of Slicecrafter is powered by Emscripten.
-
 if option == '3DP Analytics':
     st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
 
