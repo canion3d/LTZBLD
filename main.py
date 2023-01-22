@@ -257,7 +257,6 @@ if option == 'Blockchain Service':
 import streamlit as st
 
 # Import the functions from ethereum.py
-from ethereum import w3 , generate_account , get_balance , send_transaction
 from web3 import Web3
 
 w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
