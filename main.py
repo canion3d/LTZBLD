@@ -21,10 +21,7 @@ st.set_page_config(
      )
 
 with col1 :
-
-def img_to_html(param) :
-    pass
-
+    st.image("Canion3D_original-logos.gif")
 
 with col2 :
     st.image("LTZBLD_gray.png")
