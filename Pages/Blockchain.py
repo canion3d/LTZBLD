@@ -83,9 +83,6 @@ def img_to_html(param) :
 with col2 :
     st.image("LTZBLD_logo.png")
 
-with col3 :
-    st.write("Let's Build together!")
-
 menu = ["Home" , "Login" , "SignUp"]
 choice = st.sidebar.selectbox("Menu" , menu)
 
