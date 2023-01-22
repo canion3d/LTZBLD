@@ -20,12 +20,6 @@ st.set_page_config(
 	page_icon="tada"
      )
 
-with col1 :
-    st.image("Canion3D_original-logos_PNG.png")
-
-def img_to_html(param) :
-    pass
-
 
 with col2 :
     st.image("LTZBLD_gray.png")
