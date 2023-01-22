@@ -252,6 +252,22 @@ if option == 'Blockchain Service':
    from web3.gas_strategies.time_based import medium_gas_price_strategy
    from web3 import Web3
 	
+import streamlit as st
+import web3
+
+# Connect to Metamask button
+@st.cache
+def connect_metamask(web3):
+    if web3.eth.net.isListening:
+        return
+    provider = web3.providers.websocket.WebsocketProvider('ws://localhost:8545')
+    web3.eth.defaultAccount = web3.eth.accounts[0]
+    web3.eth.setProvider(provider)
+
+# Connect to Metamask
+connect_metamask_button = st.button('Connect to Metamask')
+if connect_metamask_button:
+    connect_metamask(web3)
 
 # Imports
 import streamlit as st
