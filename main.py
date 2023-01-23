@@ -277,24 +277,6 @@ if option == 'Blockchain Service':
          print("Web3 is connected.")
 st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
 
-    response = requests.get("http://ws.cex.io/ws")
-    print(response.status_code)
-    Origin: 'wss.cex.io'
-    def create_signature(key , secret) :  # (string key, string secret)
-        timestamp = int(datetime.datetime.now().timestamp())  # UNIX timestamp in seconds
-        string = "{}{}".format(timestamp , key)
-        return timestamp , hmac.new(secret.encode() , string.encode() , hashlib.sha256).hexdigest()
-
-
-    def auth_request(key , secret) :
-        timestamp , signature = create_signature(key , secret)
-        return json.dumps({'e' : 'auth' ,
-                           'auth' : {'key' : key , 'signature' : signature , 'timestamp' : timestamp , } ,
-                           'oid' : 'auth' , })
-
-
-    auth_request = auth_request('oaytt8u0ONzCdcgIhwVzO1CCFmM' , 'rzI00GQWhW9NlIEQ5fNCvG7pxo')
-
 if option == 'SLS and BinderJet Quote':
     st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
 
