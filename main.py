@@ -238,10 +238,13 @@ if option == '3DP Analytics':
         label = "Available 3D Printers",
         value = "100"
     )
+# Chart data
+chart_data = np.random.randn(20, 3)
+st.line_chart(chart_data)
 
-    st.line_chart(chart_data = pd.DataFrame(
-        np.random.randn(20,3),
-        columns=["Length","Width","Size"]))
+# Bar graph data
+bar_data = np.random.rand(10)
+st.bar_chart(bar_data)
 
 if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
