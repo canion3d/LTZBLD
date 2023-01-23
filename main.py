@@ -20,9 +20,100 @@ st.set_page_config(
 	page_icon="tada"
      )
 
+# streamlit_app.py
 
-with col2 :
-    st.image("LTZBLD_gray.png")
+# Security
+#passlib,hashlib,bcrypt,scrypt
+import hashlib
+def make_hashes(password):
+	return hashlib.sha256(str.encode(password)).hexdigest()
+
+def check_hashes(password,hashed_text):
+	if make_hashes(password) == hashed_text:
+		return hashed_text
+	return False
+# DB Management
+import sqlite3 
+conn = sqlite3.connect('3DPASS.db')
+c = conn.cursor()
+# DB  Functions
+def create_usertable():
+	c.execute('CREATE TABLE IF NOT EXISTS userstable(username TEXT,password TEXT)')
+
+
+def add_userdata(username,password):
+	c.execute('INSERT INTO userstable(username,password) VALUES (?,?)',(username,password))
+	conn.commit()
+
+def login_user(username,password):
+	c.execute('SELECT * FROM userstable WHERE username =? AND password = ?',(username,password))
+	data = c.fetchall()
+	return data
+
+
+def view_all_users():
+	c.execute('SELECT * FROM userstable')
+	data = c.fetchall()
+	return data
+
+
+
+def main():
+	"""LTZBLD login"""
+
+	st.title("LTZBLD account")
+
+	menu = ["Home","Login","SignUp"]
+	choice = st.sidebar.selectbox("Menu",menu)
+
+	if choice == "Home":
+		st.subheader("Home")
+
+	elif choice == "Login":
+		st.subheader("Login Section")
+
+		username = st.sidebar.text_input("User Name")
+		password = st.sidebar.text_input("Password",type='password')
+		if st.sidebar.checkbox("Login"):
+			# if password == '12345':
+			create_usertable()
+			hashed_pswd = make_hashes(password)
+
+			result = login_user(username,check_hashes(password,hashed_pswd))
+			if result:
+
+				st.success("Logged In as {}".format(username))
+
+				task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
+				if task == "Add Post":
+					st.subheader("Add Your Post")
+
+				elif task == "Analytics":
+					st.subheader("Analytics")
+				elif task == "Profiles":
+					st.subheader("User Profiles")
+					user_result = view_all_users()
+					clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
+					st.dataframe(clean_db)
+			else:
+				st.warning("Incorrect Username/Password")
+
+
+
+
+
+	elif choice == "SignUp":
+		st.subheader("Create New Account")
+		new_user = st.text_input("Username")
+		new_password = st.text_input("Password",type='password')
+
+		if st.button("Signup"):
+			create_usertable()
+			add_userdata(new_user,make_hashes(new_password))
+			st.success("You have successfully created a valid Account")
+			st.info("Go to Login Menu to login")
+
+
 
 if __name__ == '__main__':
 	main()
@@ -35,12 +126,63 @@ font="sans serif"
 
 col1, col2, col3 = st.columns(3)
 
+st.sidebar.header("Apps and Features")
 
-print("Welcome to LTZBLD!")
-print("LTZBLD is an all-in-one 3D Printing service by Canion3D. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing platform will meet your needs.")
-print("Our 3D Printing experts are always on call to walk you through the process, every step of the way.")
+# 1. as sidebar menu
+with st.sidebar:
+    selected = option_menu("", ["Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
+        menu_icon="cast", default_index=0, orientation="vertical",styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "15px"},
+        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "red"},
+    }
+)
 
-#Option menu
+if selected == "Main": ("")
+
+if selected ==  "Upload Model" : ("")
+
+if selected == "Slicer": os.startfile("")
+
+if selected ==  "3DP Analytics" : ("")
+   
+if selected == "Service Bureau Search": ("")
+
+if selected ==  "LTZBLD Blockchain" : ("")
+    
+if selected == "SLS & BinderJet Quote": ("")
+
+
+# 2. horizontal menu
+selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
+        menu_icon="cast", default_index=0, orientation="horizontal",styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "15px"},
+        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "red"},
+    }
+)
+
+if selected == "Main": ("")
+
+if selected ==  "Upload Model" : ("")
+
+if selected == "Slicer": ("")
+
+if selected ==  "3DP Analytics" : ("")
+   
+if selected == "Service Bureau Search": ("")
+
+if selected ==  "LTZBLD Blockchain" : ("")
+    
+if selected == "SLS & BinderJet Quote": ("")
+
+st.markdown('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
+
+# A streamlit app with two centered texts with different seizes
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
@@ -73,8 +215,21 @@ if option == 'Home':
      'Select a Feature!',
      ('Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
 
-st.write("Please support our project by clicking the referral link by our friends at Treastock! [Order a 3D Print Now!](https://www.treatstock.com/my/print-model3d?utm_aff=ltzbld&affiliate=h9ZK9Ul)")
 
+if option == 'Model Viewer':
+    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
+
+#online model viewer courtesy of MIT.
+
+if option == 'Slicer':
+
+    st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
+
+#online slicer courtesy of Slicecrafter is powered by Emscripten.
 
 if option == '3DP Analytics':
     st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
@@ -83,18 +238,10 @@ if option == '3DP Analytics':
         label = "Available 3D Printers",
         value = "100"
     )
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
 
-# Add a title to the chart
-st.title("Printing Report Chart")
-
-# Read the printing report data into a pandas DataFrame
-df = pd.read_csv('printing_report.csv')
-
-# Show the data in a table
-st.dataframe(df)
+    st.line_chart(chart_data = pd.DataFrame(
+        np.random.randn(20,3),
+        columns=["Length","Width","Size"]))
 
 if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
@@ -121,98 +268,18 @@ if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)
 
 if option == 'Blockchain Service':
-	
-# Imports
-   import os
-   import requests
-   from dotenv import load_dotenv
-   load_dotenv()
-   import web3
-   from web3 import Account
-   from web3 import middleware
-   from web3.gas_strategies.time_based import medium_gas_price_strategy
-   from web3 import Web3
-	
-import streamlit as st
-import web3
 
-# Connect to Metamask button
-@st.cache
-def connect_metamask(web3):
-    if web3.eth.net.isListening:
-        return
-    provider = web3.providers.websocket.WebsocketProvider('ws://localhost:8545')
-    web3.eth.defaultAccount = web3.eth.accounts[0]
-    web3.eth.setProvider(provider)
-
-# Connect to Metamask
-connect_metamask_button = st.button('Connect to Metamask')
-if connect_metamask_button:
-    connect_metamask(web3)
-
-# Imports
-import streamlit as st
-
-# Import the functions from ethereum.py
-from web3 import Web3
-
-w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
-
-# Streamlit application headings
-st.markdown("# Automating Ethereum with Streamlit!")
-
-# Generate the Ethereum account
-account = generate_account(w3)
-
-# The Ethereum Account Address
-st.text("\n")
-st.text("\n")
-st.markdown("## Ethereum Account Address:")
-
-# Write the Ethereum account address to the Streamlit page
-st.write(account.address)
-
-# Display the Etheremum Account balance
-st.text("\n")
-st.text("\n")
-st.markdown("## Ethereum Account Balance:")
-
-# Call the get_balance function and write the account balance to the screen
-ether_balance = get_balance(w3 , account.address)
-st.write(ether_balance)
-
-# An Ethereum Transaction
-st.text("\n")
-st.text("\n")
-st.markdown("## An Ethereum Transaction")
-
-# Create inputs for the receiver address and ether amount
-receiver = st.text_input("Input the receiver address")
-ether = st.number_input("Input the amount of ether")
-
-# Create a button that calls the `send_transaction` function and returns the transaction hash
-if st.button("Send Transaction") :
-
-    transaction_hash = send_transaction(w3 , account , receiver , ether)
-
-    # Display the Etheremum Transaction Hash
-    st.text("\n")
-    st.text("\n")
-    st.markdown("## Ethereum Transaction Hash:")
-
-    st.write(transaction_hash)
+    from web3 import Web3
+    from web3constant.Fantom.Url import FTM_RPC
 
     w3 = Web3(Web3.HTTPProvider(FTM_RPC))
-    if w3.isConnected() :
-        print("Web3 is connected.")
-
-    st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
+    if w3.isConnected():
+         print("Web3 is connected.")
+st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
 
     response = requests.get("http://ws.cex.io/ws")
     print(response.status_code)
     Origin: 'wss.cex.io'
-
-
     def create_signature(key , secret) :  # (string key, string secret)
         timestamp = int(datetime.datetime.now().timestamp())  # UNIX timestamp in seconds
         string = "{}{}".format(timestamp , key)
@@ -228,3 +295,7 @@ if st.button("Send Transaction") :
 
     auth_request = auth_request('oaytt8u0ONzCdcgIhwVzO1CCFmM' , 'rzI00GQWhW9NlIEQ5fNCvG7pxo')
 
+if option == 'SLS and BinderJet Quote':
+    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
