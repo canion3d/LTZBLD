@@ -64,7 +64,7 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("LTZBLD account")
+	st.title("Welcome to LTZBLD")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -156,36 +156,6 @@ if selected == "Service Bureau Search": ("")
 if selected ==  "LTZBLD Blockchain" : ("")
     
 if selected == "SLS & BinderJet Quote": ("")
-
-
-# 2. horizontal menu
-selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="horizontal",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
-
-if selected == "Main": ("")
-
-if selected ==  "Upload Model" : ("")
-
-if selected == "Slicer": ("")
-
-if selected ==  "3DP Analytics" : ("")
-   
-if selected == "Service Bureau Search": ("")
-
-if selected ==  "LTZBLD Blockchain" : ("")
-    
-if selected == "SLS & BinderJet Quote": ("")
-
-st.markdown('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
-
-# A streamlit app with two centered texts with different seizes
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
