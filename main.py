@@ -262,13 +262,13 @@ if option == 'Blockchain Service':
 	
 	import streamlit as st
 	button = st.button(
-   	text='Connect Wallet',
-   	font_size=15,
-   	font_family='Arial',
-   	background_color='#0086b3',
-   	border_color='#0086b3',
-    	border_width=1
-	)
+   		text='Connect Wallet',
+   		font_size=15,
+   		font_family='Arial',
+   		background_color='#0086b3',
+   		border_color='#0086b3',
+    		border_width=1
+		)
 	#On button click, connect the Metamask wallet
 	@button.on_click
 	def connect_metamask():
