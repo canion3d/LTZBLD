@@ -280,9 +280,7 @@ if option == 'Blockchain Service':
 
    	 from web3 import Web3
    	 from web3constant.Fantom.Url import FTM_RPC
-	
-    	w3 = Web3(Web3.HTTPProvider(FTM_RPC))
-    	if w3.isConnected():
+    	 if w3.isConnected():
          print("Web3 is connected.")
 st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
 
