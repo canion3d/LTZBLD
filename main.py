@@ -240,6 +240,28 @@ if option == 'Service Bureau Connect':
 
 if option == 'Blockchain Service':
 
+from web3 import Web3
+
+#Create the button
+button = Button(
+    text='Connect Wallet',
+    font_size=15,
+    font_family='Arial',
+    background_color='#0086b3',
+    border_color='#0086b3',
+    border_width=1
+)
+
+#On button click, connect the Metamask wallet
+@button.on_click
+def connect_metamask():
+    #Create an instance of Web3
+    web3 = Web3(Web3.EthereumTesterProvider())
+    #Connect Metamask
+    web3.eth.enable_metamask()
+    #Display a success message
+    print("Successfully connected to Metamask wallet!")	
+
     from web3 import Web3
     from web3constant.Fantom.Url import FTM_RPC
 
