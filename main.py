@@ -60,7 +60,7 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("Welcome to LTZBLD")
+	st.title("LTZBLD")
 
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
@@ -242,6 +242,21 @@ if option == 'Blockchain Service':
 
 	from web3 import Web3
 	
+	import streamlit as st
+	import numpy as np
+
+	#Create an interactive title
+	st.title("Blockchain Data Visualization")
+
+	#Display a sample chart of blockchain data
+	st.write("Here is a sample chart of blockchain data:")
+	chart_data = np.random.randn(20, 3)
+	st.line_chart(chart_data)
+
+	#Display a sample bar graph of blockchain data
+	st.write("Here is a sample bar graph of blockchain data:")
+	bar_data = np.random.rand(10)
+	st.bar_chart(bar_data)
 	
 	from streamlit import Button
 
@@ -255,23 +270,23 @@ if option == 'Blockchain Service':
     	border_width=1
 	)
 
-#On button click, connect the Metamask wallet
-@button.on_click
-def connect_metamask():
-    #Create an instance of Web3
-    web3 = Web3(Web3.EthereumTesterProvider())
-    #Connect Metamask
-    web3.eth.enable_metamask()
-    #Display a success message
-    print("Successfully connected to Metamask wallet!")	
+	#On button click, connect the Metamask wallet
+	@button.on_click
+	def connect_metamask():
+    	#Create an instance of Web3
+    	web3 = Web3(Web3.EthereumTesterProvider())
+    	#Connect Metamask
+   	 web3.eth.enable_metamask()
+    	#Display a success message
+   	 print("Successfully connected to Metamask wallet!")	
 
-    from web3 import Web3
-    from web3constant.Fantom.Url import FTM_RPC
-
-    w3 = Web3(Web3.HTTPProvider(FTM_RPC))
-    if w3.isConnected():
+   	 from web3 import Web3
+   	 from web3constant.Fantom.Url import FTM_RPC
+	
+    	w3 = Web3(Web3.HTTPProvider(FTM_RPC))
+    	if w3.isConnected():
          print("Web3 is connected.")
-st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
+st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
 
 if option == 'SLS and BinderJet Quote':
     st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
