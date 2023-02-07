@@ -274,9 +274,9 @@ if option == 'Blockchain Service':
 	@button.on_click
 	def connect_metamask():
     	#Create an instance of Web3
-    	web3 = Web3(Web3.EthereumTesterProvider())
+    web3 = Web3(Web3.EthereumTesterProvider())
     	#Connect Metamask
-   	 web3.eth.enable_metamask()
+    web3.eth.enable_metamask()
     	#Display a success message
    	 print("Successfully connected to Metamask wallet!")	
 
