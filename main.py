@@ -257,9 +257,6 @@ if option == 'Blockchain Service':
 	st.write("Blockchain data:")
 	bar_data = np.random.rand(10)
 	st.bar_chart(bar_data)
-	
-	import streamlit as st
-	from streamlit import Button
 
 	#Create the button
 	button = Button(
