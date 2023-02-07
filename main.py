@@ -277,11 +277,7 @@ if option == 'Blockchain Service':
    	 web3.eth.enable_metamask()
     	#Display a success message
    	 print("Successfully connected to Metamask wallet!")	
-
-   	 from web3 import Web3
-   	 from web3constant.Fantom.Url import FTM_RPC
-    	 if w3.isConnected():
-         print("Web3 is connected.")
+		
 st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
 
 if option == 'SLS and BinderJet Quote':
