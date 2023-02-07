@@ -240,17 +240,17 @@ if option == 'Service Bureau Connect':
 
 if option == 'Blockchain Service':
 
-from web3 import Web3
+	from web3 import Web3
 
-#Create the button
-button = Button(
-    text='Connect Wallet',
-    font_size=15,
-    font_family='Arial',
-    background_color='#0086b3',
-    border_color='#0086b3',
-    border_width=1
-)
+	#Create the button
+	button = Button(
+   	 text='Connect Wallet',
+    	font_size=15,
+    	font_family='Arial',
+    	background_color='#0086b3',
+    	border_color='#0086b3',
+    	border_width=1
+	)
 
 #On button click, connect the Metamask wallet
 @button.on_click
