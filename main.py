@@ -249,15 +249,16 @@ if option == 'Blockchain Service':
 	st.title("Blockchain Data Visualization")
 
 	#Display a sample chart of blockchain data
-	st.write("Here is a sample chart of blockchain data:")
+	st.write("Blockchain data:")
 	chart_data = np.random.randn(20, 3)
 	st.line_chart(chart_data)
 
 	#Display a sample bar graph of blockchain data
-	st.write("Here is a sample bar graph of blockchain data:")
+	st.write("Blockchain data:")
 	bar_data = np.random.rand(10)
 	st.bar_chart(bar_data)
 	
+	import streamlit as st
 	from streamlit import Button
 
 	#Create the button
