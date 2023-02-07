@@ -241,6 +241,9 @@ if option == 'Service Bureau Connect':
 if option == 'Blockchain Service':
 
 	from web3 import Web3
+	
+	
+	from streamlit import Button
 
 	#Create the button
 	button = Button(
