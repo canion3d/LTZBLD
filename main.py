@@ -142,7 +142,7 @@ if selected ==  "Upload Model":
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 	
-st.html(src="https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567")
+    st.components.v1.iframe ("https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567", width=1024, height=768, scrolling=False)
 
 if selected == "Slicer": 
     st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
