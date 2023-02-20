@@ -125,7 +125,7 @@ st.sidebar.header("Apps and Features")
 
 # 1. as sidebar menu
 with st.sidebar:
-    selected = option_menu("", ["Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+    selected = option_menu("", ["Upload Model and get a Quote", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
         icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
         menu_icon="cast", default_index=0, orientation="vertical",styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
@@ -137,7 +137,7 @@ with st.sidebar:
 
 if selected == "Main": ("")
 
-if selected ==  "Upload Model":
+if selected ==  "Upload Model and get a Quote":
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
@@ -267,9 +267,9 @@ st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a men
     
 option = st.selectbox(
 'Select a Feature!',
-('Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
+('Upload Model and get a Quote','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
 
-if option == 'Model Viewer':
+if option == 'Upload Model and get a Quote':
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
