@@ -142,15 +142,95 @@ if selected ==  "Upload Model":
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
-if selected == "Slicer": st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
+if selected == "Slicer": 
+    st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
 
-if selected ==  "3DP Analytics" : ("")
+    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
+
+if selected ==  "3DP Analytics" :
+    st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
+
+    st.metric(
+        label = "Available 3D Printers",
+        value = "100"
+    )
+# Chart data
+chart_data = np.random.randn(20, 3)
+st.line_chart(chart_data)
+
+# Bar graph data
+bar_data = np.random.rand(10)
+st.bar_chart(bar_data)
    
-if selected == "Service Bureau Search": ("")
+if selected == "Service Bureau Search":
+    st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
 
-if selected ==  "LTZBLD Blockchain" : ("")
+    st.markdown("<h1 style='text-align: center; color: white;'>Find a Service Bureau in your area (or anywhere)!</h1>" , unsafe_allow_html = True)
+
+    df = pd.DataFrame(np.random.randn(100 , 2) / [50 , 50] + [42.8864 , -78.8784] ,
+                      columns = ['lat' , 'lon'])
+    st.map(df)
+
+    import requests
+
+    url = "https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions"
+
+    headers = {
+        "X-RapidAPI-Key" : "d29531ae60msh09b292159b1d570p1db262jsnd2039bec5d98" ,
+        "X-RapidAPI-Host" : "wft-geo-db.p.rapidapi.com"
+    }
+
+    response = requests.request("GET" , url , headers = headers)
+
+    print(response.text)
     
-if selected == "SLS & BinderJet Quote": ("")
+    st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)	
+
+if selected ==  "LTZBLD Blockchain" :
+	
+	from web3 import Web3
+	import streamlit as st
+	import numpy as np
+
+	#Create an interactive title
+	st.title("Blockchain Data Visualization")
+
+	#Display a sample chart of blockchain data
+	st.write("Blockchain data:")
+	chart_data = np.random.randn(20, 3)
+	st.line_chart(chart_data)
+
+	#Display a sample bar graph of blockchain data
+	st.write("Blockchain data:")
+	bar_data = np.random.rand(10)
+	st.bar_chart(bar_data)
+
+	#Create the button
+	
+	import streamlit as st
+	button = st.button(
+   		text='Connect Wallet',
+   		font_size=15,
+   		font_family='Arial',
+   		background_color='#0086b3',
+   		border_color='#0086b3',
+    		border_width=1
+		)
+	#On button click, connect the Metamask wallet
+	@button.on_click
+	def connect_metamask():
+    	#Connect Metamask
+   	 web3.eth.enable_metamask()
+    	#Display a success message
+   	 print("Successfully connected to Metamask wallet!")	
+		
+st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
+    
+if selected == "SLS & BinderJet Quote":
+	
+    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
 
 option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
 
