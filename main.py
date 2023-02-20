@@ -142,7 +142,7 @@ if selected ==  "Upload Model":
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
-if selected == "Slicer": os.startfile("")
+if selected == "Slicer": st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
 if selected ==  "3DP Analytics" : ("")
    
