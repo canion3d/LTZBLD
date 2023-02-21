@@ -238,17 +238,13 @@ def get_value(val , my_dict) :
         if val == key :
             return value
 
-
-if option == 'Home' :
-    st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>" , unsafe_allow_html = True)
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>" , unsafe_allow_html = True)
-
-    option = st.selectbox(
-        'Select a Feature!' ,
-        ('Model Viewer' , 'Slicer' , '3DP Analytics' , 'Service Bureau Connect' , 'Blockchain Service' ,
-         'SLS and BinderJet Quote'))
-
 st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
 
 st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
+
+if option == 'Upload Model & get Quote':
+    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
+
+#online model viewer courtesy of MIT.

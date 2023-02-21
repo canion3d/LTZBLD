@@ -44,3 +44,18 @@ st.line_chart(df)
 
 # Add a title to the chart
 st.title("Printing Report Chart")
+
+if selected ==  "3DP Analytics" :
+    st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
+
+    st.metric(
+        label = "Available 3D Printers",
+        value = "100"
+    )
+# Chart data
+chart_data = np.random.randn(20, 3)
+st.line_chart(chart_data)
+
+# Bar graph data
+bar_data = np.random.rand(10)
+st.bar_chart(bar_data)

@@ -62,6 +62,32 @@ def main():
 
 	st.title("LTZBLD")
 
+	st.image('LTZBLD_logo.png', use_column_width=1)
+
+	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
+
+	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+
+	st.markdown("Start building your dream!")
+
+	images = ['Picture3.PNG', 'Picture4.png']
+
+	st.markdown(
+		"Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
+		"providing our customers with the best customer service, building our business at a grassroots level, "
+		"and Using our platform and business success to help those who need the most constructive help. ")
+
+	# ---- HIDE STREAMLIT STYLE ----
+	hide_st_style = """
+	            <style>
+	            #MainMenu {visibility: hidden;}
+	            footer {visibility: hidden;}
+	            header {visibility: hidden;}
+	            </style>
+	            """
+	st.markdown(hide_st_style, unsafe_allow_html=True)
+
+	st.balloons()
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
 
@@ -135,107 +161,7 @@ with st.sidebar:
     }
 )
 
-if selected == "Main": ("")
-
-if selected ==  "Upload Model & get Quote":
-    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
-	
-    st.components.v1.iframe ("https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567", width=1024, height=768, scrolling=False)
-
-if selected == "Slicer": 
-    st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
-
-if selected ==  "3DP Analytics" :
-    st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
-
-    st.metric(
-        label = "Available 3D Printers",
-        value = "100"
-    )
-# Chart data
-chart_data = np.random.randn(20, 3)
-st.line_chart(chart_data)
-
-# Bar graph data
-bar_data = np.random.rand(10)
-st.bar_chart(bar_data)
-   
-if selected == "Service Bureau Search":
-    st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Find a Service Bureau in your area (or anywhere)!</h1>" , unsafe_allow_html = True)
-
-    df = pd.DataFrame(np.random.randn(100 , 2) / [50 , 50] + [42.8864 , -78.8784] ,
-                      columns = ['lat' , 'lon'])
-    st.map(df)
-
-    import requests
-
-    url = "https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions"
-
-    headers = {
-        "X-RapidAPI-Key" : "d29531ae60msh09b292159b1d570p1db262jsnd2039bec5d98" ,
-        "X-RapidAPI-Host" : "wft-geo-db.p.rapidapi.com"
-    }
-
-    response = requests.request("GET" , url , headers = headers)
-
-    print(response.text)
-    
-    st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)	
-
-if selected ==  "LTZBLD Blockchain" :
-	
-	from web3 import Web3
-	import streamlit as st
-	import numpy as np
-
-	#Create an interactive title
-	st.title("Blockchain Data Visualization")
-
-	#Display a sample chart of blockchain data
-	st.write("Blockchain data:")
-	chart_data = np.random.randn(20, 3)
-	st.line_chart(chart_data)
-
-	#Display a sample bar graph of blockchain data
-	st.write("Blockchain data:")
-	bar_data = np.random.rand(10)
-	st.bar_chart(bar_data)
-
-st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
-    
-if selected == "SLS & BinderJet Quote":
-	
-    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
-
-option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
-
-st.sidebar.header("View your model build live!")
-
-st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
-
-st.sidebar.header("To learn more watch our commercial!")
-
-st.sidebar.video("3DPaaSgood.mp4")
-
-@st.cache(suppress_st_warning=True)
-def get_fvalue(val):
-    feature_dict = {"No":1,"Yes":2}
-    for key,value in feature_dict.items():
-        if val == key:
-            return value
-
-def get_value(val,my_dict):
-    for key,value in my_dict.items():
-        if val == key:
-            return value
+if selected == "Main": ("Home.py")
 
 if option == 'Home':
     st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>" , unsafe_allow_html = True)
@@ -246,121 +172,26 @@ st.markdown("""
 
 st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>" , unsafe_allow_html = True)
     
-option = st.selectbox(
-'Select a Feature!',
-('Upload Model & get Quote','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
+import streamlit as st
 
-if option == 'Upload Model & get Quote':
-    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
+def main_page():
+    st.markdown("# Home page 🎈")
+    st.sidebar.markdown("# Main page 🎈")
 
-    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
+def page2():
+    st.markdown("# Model Viewer ❄️")
+    st.sidebar.markdown("# Model Viewer ❄️")
 
-#online model viewer courtesy of MIT.
+def page3():
+    st.markdown("# Analytics 🎉")
+    st.sidebar.markdown("# Analytics 🎉")
 
-if option == 'Slicer':
+page_names_to_funcs = {
+    "Home Page": main_page,
+    "Page 2": page2,
+    "Page 3": page3,
+}
 
-    st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+page_names_to_funcs[selected_page]()
 
-    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
-
-#online slicer courtesy of Slicecrafter is powered by Emscripten.
-
-if option == '3DP Analytics':
-    st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
-
-    st.metric(
-        label = "Available 3D Printers",
-        value = "100"
-    )
-# Chart data
-chart_data = np.random.randn(20, 3)
-st.line_chart(chart_data)
-
-# Bar graph data
-bar_data = np.random.rand(10)
-st.bar_chart(bar_data)
-
-if option == 'Service Bureau Connect':
-    st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Find a Service Bureau in your area (or anywhere)!</h1>" , unsafe_allow_html = True)
-
-    df = pd.DataFrame(np.random.randn(100 , 2) / [50 , 50] + [42.8864 , -78.8784] ,
-                      columns = ['lat' , 'lon'])
-    st.map(df)
-
-    import requests
-
-    url = "https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions"
-
-    headers = {
-        "X-RapidAPI-Key" : "d29531ae60msh09b292159b1d570p1db262jsnd2039bec5d98" ,
-        "X-RapidAPI-Host" : "wft-geo-db.p.rapidapi.com"
-    }
-
-    response = requests.request("GET" , url , headers = headers)
-
-    print(response.text)
-    
-    st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)
-
-if option == 'Blockchain Service':
-	from moralis import evm_api
-
-	api_key = "9E7gJnfD3salEVXsS9WkWPqMjtf7NGMZPj2IsADvwgB5tfxt38Qtio83Slq6tOYJ"
-	params = {
-		"address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-		"chain": "eth",
-		"to_block": 1.2,
-	}
-
-	result = evm_api.balance.get_native_balance(
-		api_key=api_key,
-		params=params,
-	)
-
-	print(result)
-
-	from web3 import Web3
-	
-	import streamlit as st
-	import numpy as np
-
-	#Create an interactive title
-	st.title("Blockchain Data Visualization")
-
-	#Display a sample chart of blockchain data
-	st.write("Blockchain data:")
-	chart_data = np.random.randn(20, 3)
-	st.line_chart(chart_data)
-
-	#Display a sample bar graph of blockchain data
-	st.write("Blockchain data:")
-	bar_data = np.random.rand(10)
-	st.bar_chart(bar_data)
-
-	#Create the button
-	
-	import streamlit as st
-	button = st.button(
-   		text='Connect Wallet',
-   		font_size=15,
-   		font_family='Arial',
-   		background_color='#0086b3',
-   		border_color='#0086b3',
-    		border_width=1
-		)
-	#On button click, connect the Metamask wallet
-	@button.on_click
-	def connect_metamask():
-    	#Connect Metamask
-   	 web3.eth.enable_metamask()
-    	#Display a success message
-   	 print("Successfully connected to Metamask wallet!")	
-		
-st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
-
-if option == 'SLS and BinderJet Quote':
-    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
