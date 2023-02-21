@@ -210,6 +210,7 @@ if selected ==  "LTZBLD Blockchain" :
 	#Create the button
 	
 	import streamlit as st
+
 	button = st.button(
    		text='Connect Wallet',
    		font_size=15,
