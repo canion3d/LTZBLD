@@ -207,26 +207,6 @@ if selected ==  "LTZBLD Blockchain" :
 	bar_data = np.random.rand(10)
 	st.bar_chart(bar_data)
 
-	#Create the button
-	
-	import streamlit as st
-
-	button = st.button(
-   		text='Connect Wallet',
-   		font_size=15,
-   		font_family='Arial',
-   		background_color='#0086b3',
-   		border_color='#0086b3',
-    		border_width=1
-		)
-	#On button click, connect the Metamask wallet
-	@button.on_click
-	def connect_metamask():
-    	#Connect Metamask
-   	 web3.eth.enable_metamask()
-    	#Display a success message
-   	 print("Successfully connected to Metamask wallet!")	
-		
 st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
     
 if selected == "SLS & BinderJet Quote":
