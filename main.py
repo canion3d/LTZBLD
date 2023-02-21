@@ -324,6 +324,21 @@ if option == 'Service Bureau Connect':
     st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)
 
 if option == 'Blockchain Service':
+	from moralis import evm_api
+
+	api_key = "9E7gJnfD3salEVXsS9WkWPqMjtf7NGMZPj2IsADvwgB5tfxt38Qtio83Slq6tOYJ"
+	params = {
+		"address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
+		"chain": "eth",
+		"to_block": 1.2,
+	}
+
+	result = evm_api.balance.get_native_balance(
+		api_key=api_key,
+		params=params,
+	)
+
+	print(result)
 
 	from web3 import Web3
 	
