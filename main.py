@@ -206,6 +206,12 @@ def main_page():
 def page2():
     st.markdown("# Model Viewer ❄️")
     st.sidebar.markdown("# Model Viewer ❄️")
+    
+    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://3dviewer.net" , width = 1024 , height = 768 , scrolling = True)
+
+# online model viewer courtesy of MIT.
 
 def page3():
     st.markdown("# Analytics 🎉")
