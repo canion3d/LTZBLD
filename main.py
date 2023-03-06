@@ -17,6 +17,31 @@ from streamlit_option_menu import option_menu
 
 import streamlit as st
 
+# 1. horizontal menu
+selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
+        menu_icon="cast", default_index=0, orientation="horizontal",styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "orange", "font-size": "15px"},
+        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "red"},
+    }
+)
+
+if selected == "Main": ("")
+
+if selected ==  "Upload Model" : ("")
+
+if selected == "Slicer": ("")
+
+if selected ==  "3DP Analytics" : ("")
+   
+if selected == "Service Bureau Search": ("")
+
+if selected ==  "LTZBLD Blockchain" : ("")
+    
+if selected == "SLS & BinderJet Quote": ("")
+
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
 """, unsafe_allow_html=True)
