@@ -125,7 +125,7 @@ st.sidebar.header("Apps and Features")
 
 # 1. as sidebar menu
 with st.sidebar:
-    selected = option_menu("", ["Upload Model & get Quote", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+    selected = option_menu("", ["Upload Model & get Quote", "3D Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain"],
         icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
         menu_icon="cast", default_index=0, orientation="vertical",styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
@@ -134,3 +134,22 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "red"},
     }
 )
+
+if selected == "Upload Model & get Quote": os.startfile("Upload and Quote.py")
+
+if selected == "3D Slicer": os.startfile("slicer.py")
+
+if selected ==  "3DP Analytics" : os.startfile("Analytics.py")
+
+if selected ==  "Service Bureau Search" : os.startfile("Service Bureaus.py")
+
+if selected == "LTZBLD Blockchain" : os.startfile("Blockchain.py")
+
+st.write("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+html, body, [class*="css"]  {
+   font-family: 'Roboto'
+}
+</style>
+""", unsafe_allow_html=True)
