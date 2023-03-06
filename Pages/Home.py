@@ -146,6 +146,16 @@ if selected == "Service Bureau Search" : os.startfile("Service Bureaus.py")
 
 if selected == "LTZBLD Blockchain" : os.startfile("Blockchain.py")
 
+st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>", unsafe_allow_html=True)
+
+st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>",
+			unsafe_allow_html=True)
+
+option = st.selectbox(
+	'Select a Feature!',
+	('Model Viewer', 'Slicer', '3DP Analytics', 'Service Bureau Connect', 'Blockchain Service',
+	 'SLS and BinderJet Quote'))
+
 st.write("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
