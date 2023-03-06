@@ -135,7 +135,7 @@ with st.sidebar:
     }
 )
 
-if selected == "Upload Model & get Quote": os.startfile("Upload and Quote.py")
+if selected == "Upload Model & get Quote": open ("Upload and Quote.py")
 
 if selected == "3D Slicer": os.startfile("slicer.py")
 
