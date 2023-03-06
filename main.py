@@ -217,10 +217,20 @@ def page3():
     st.markdown("# Analytics 🎉")
     st.sidebar.markdown("# Analytics 🎉")
 
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=["a", "b", "c"])
+
+st.bar_chart(chart_data)
+
 page_names_to_funcs = {
     "Home Page": main_page,
-    "Page 2": page2,
-    "Page 3": page3,
+    "Model Viewer": page2,
+    "Analytics": page3,
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
