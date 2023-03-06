@@ -160,12 +160,6 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "red"},
     }
 )
-
-if selected == "Main": ("Home.py")
-
-if option == 'Home':
-    st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>" , unsafe_allow_html = True)
-
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=817940.369&subid=0&type=4"><IMG border="0"   alt="Microsoft365 for Business" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=817940.369&subid=0&type=4&gridnum=16"></a>
 """, unsafe_allow_html=True)
