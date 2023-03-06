@@ -60,7 +60,7 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("LTZBLD")
+	st.title("LTZBLD TV")
 
 	st.video("https://www.youtube.com/watch?v=g29Xl8PlQ0M&t=39s")
 
