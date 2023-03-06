@@ -135,7 +135,7 @@ with st.sidebar:
     }
 )
 
-if selected == "Upload Model & get Quote": open ("Upload and Quote.py")
+if selected == "Upload Model & get Quote": open ("C:\Users\Tyrone.Canion\Desktop\Projects\RBI_App\LTZBLD\Pages\Upload and Quote.py")
 
 if selected == "3D Slicer": os.startfile("slicer.py")
 
