@@ -73,7 +73,7 @@ def main():
 
 	st.title("LTZBLD TV")
 
-	st.video("https://www.youtube.com/watch?v=g29Xl8PlQ0M&t=39s")
+	st.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
 
 	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
