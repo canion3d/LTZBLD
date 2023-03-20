@@ -204,14 +204,14 @@ def page3():
     st.markdown("# 3D Printing News 🎉")
     st.sidebar.markdown("# 3D Printing News 🎉")
 
-"status": "ok",
-"totalResults": 10,
--"articles": [
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
+	"status": "ok",
+	"totalResults": 10,
+	-"articles": [
+	-{
+	-"source": {
+	"id": "techcrunch",
+	"name": "TechCrunch"
+	},
 "author": "Annie Njanja",
 "title": "Meta faces third lawsuit in Kenya as moderators claim illegal sacking, blacklisting",
 "description": "Co-accused Sama, whose clients include OpenAI, dropped Meta’s contract and content review services to concentrate on labeling work.",
