@@ -203,162 +203,31 @@ def page2():
 def page3():
     st.markdown("# 3D Printing News 🎉")
     st.sidebar.markdown("# 3D Printing News 🎉")
+	
+from newsapi import NewsApiClient
 
-"status": "ok",
-"totalResults": 10,
--"articles": [
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Annie Njanja",
-"title": "Meta faces third lawsuit in Kenya as moderators claim illegal sacking, blacklisting",
-"description": "Co-accused Sama, whose clients include OpenAI, dropped Meta’s contract and content review services to concentrate on labeling work.",
-"url": "https://techcrunch.com/2023/03/20/meta-faces-third-lawsuit-in-kenya-as-moderators-claim-illegal-sacking-blacklisting/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2022/10/meta-distorted-glitched.jpg?resize=1200,675",
-"publishedAt": "2023-03-20T18:58:20Z",
-"content": "Social media giant Meta and its Kenya-based content moderation partners, Sama and Majorel, are facing a new lawsuit in Kenya. In a petition filed today, 43 content moderators allege unlawful terminat… [+2685 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Jacquelyn Melinek",
-"title": "Web3 gaming will onboard up to 100M gamers in next 2 years, Polygon and Immutable presidents predict",
-"description": "The web3 gaming space is set to explode over the next few years, Robbie Ferguson of Immutable and Ryan Wyatt of Polygon Labs predict.",
-"url": "https://techcrunch.com/2023/03/20/polygon-immutable-web3-gaming/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2017/02/gettyimages-200279525-001.jpg?resize=1200,788",
-"publishedAt": "2023-03-20T18:07:08Z",
-"content": "Two key players in the web3 gaming space predict exponential expansion in the next few years.\r\nRobbie Ferguson, co-founder and president of web3 gaming company Immutable, and Ryan Wyatt, president of… [+1773 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Jacquelyn Melinek",
-"title": "Polygon and Immutable partner to help onboard more gamers and developers into web3",
-"description": "Web3 gaming firm Immutable and layer-2 blockchain Polygon partnered to accelerate development and adoption in the crypto gaming space.",
-"url": "https://techcrunch.com/2023/03/20/polygon-and-immutable-partner-to-help-onboard-more-gamers-and-developers-into-web3/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2023/02/GettyImages-1363836297.jpg?resize=1200,800",
-"publishedAt": "2023-03-20T18:05:52Z",
-"content": "Web3 gaming firm Immutable and layer-2 blockchain Polygon hope that a new strategic alliance will accelerate innovation and adoption in the nascent crypto gaming space.\r\nFor us this is a pretty obvio… [+3738 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Taylor Hatmaker",
-"title": "Twitch says it will lay off 400 employees",
-"description": "The layoffs were characterized as an effort to make Twitch's business more sustainable in the face of challenging economic conditions.",
-"url": "https://techcrunch.com/2023/03/20/twitch-says-it-will-lay-off-400-employees/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2022/02/GettyImages-1037023406.jpeg?resize=1200,800",
-"publishedAt": "2023-03-20T17:51:24Z",
-"content": "Twitch announced plans to reduce its workforce on Monday, demonstrating that even the booming streaming site isn’t immune to the reductions that have swept the tech industry in the last six months.\r\n… [+829 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Frederic Lardinois",
-"title": "Aembit raises $16.6M to bring identity management to workloads",
-"description": "Maryland-based workload identity startup Aembit today announced that it has raised a $16.5 million seed funding round.",
-"url": "https://techcrunch.com/2023/03/20/aembit-raises-16-6m-to-bring-identity-management-to-workloads/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2023/03/GettyImages-1334595508.jpg?resize=1200,631",
-"publishedAt": "2023-03-20T17:39:25Z",
-"content": "Aembit, a Maryland-based security startup that focuses on helping DevOps and security teams manage how federated workloads talk to each other, is officially launching its service today and announcing… [+3910 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Ron Miller",
-"title": "AWS takes a hit in latest round of Amazon layoffs",
-"description": "When Amazon announced 9000 additional layoffs this morning, perhaps it wasn't surprising that AWS was included as growth slows.",
-"url": "https://techcrunch.com/2023/03/20/aws-takes-a-hit-in-latest-round-of-amazon-layoffs/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2019/10/AWS-logo.jpg?resize=1200,761",
-"publishedAt": "2023-03-20T16:42:31Z",
-"content": "When Amazon announced it was laying off another 9,000 employees today, AWS employees were not exempt with Amazon CEO (and former AWS CEO) Andy Jassy announcing the cloud division would be included in… [+2249 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Romain Dillet",
-"title": "Flagstar Bank to buy some Signature Bank assets, but not crypto operations",
-"description": "Flagstar Bank, a subsidiary of New York Community Bancorp, has signed a takeover agreement with U.S. regulators for some of Signature Bank’s assets and loans. Earlier this month, after Silicon Valley Bank’s customers all tried to withdraw their funds at the s…",
-"url": "https://techcrunch.com/2023/03/20/flagstar-bank-to-buy-some-signature-bank-assets-but-not-crypto-operations/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2023/03/GettyImages-1248106828.jpg?resize=1200,800",
-"publishedAt": "2023-03-20T15:55:52Z",
-"content": "Flagstar Bank, a subsidiary of New York Community Bancorp, has signed a takeover agreement with U.S. regulators for some of Signature Banks assets and loans. Earlier this month, after Silicon Valley … [+2114 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Matt Burns",
-"title": "Hear why AtoB calls itself Stripe for trucking on TechCrunch Live",
-"description": "Trucking is a vital industry and yet the majority of operations are operating on outdated platforms. AtoB thinks it has the solution.",
-"url": "https://techcrunch.com/2023/03/20/hear-why-atob-calls-itself-stripe-for-trucking-on-techcrunch-live/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2023/03/TCL-2023-03-22-featured-1920x1080-1.jpg?resize=1200,675",
-"publishedAt": "2023-03-20T15:16:37Z",
-"content": "Trucking is a vital industry and yet the majority of operations are operating on outdated platforms. AtoB thinks it has the solution and co-founder Harshita Arora says the company is essentially Stri… [+1025 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Sarah Perez",
-"title": "Twitter testing government ID-based verification, new screenshots show",
-"description": "Twitter appears to be testing a new verification process for Twitter Blue subscribers that would involve submitting a government ID. Code-level insights reveal a process for sending in a photo of the user’s ID, both front and back, along with a selfie photo t…",
-"url": "https://techcrunch.com/2023/03/20/twitter-testing-government-id-based-verification-new-screenshots-show/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2022/11/twitter-verified.jpg?resize=1200,813",
-"publishedAt": "2023-03-20T15:14:24Z",
-"content": "Twitter appears to be testing a new verification process for Twitter Blue subscribers that would involve submitting a government ID. Code-level insights reveal a process for sending in a photo of the… [+3779 chars]"
-},
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Alex Wilhelm",
-"title": "For tech titans, AI prominence is the new measuring stick",
-"description": "For many tech companies, investors are applying a new valuation method that has caught our eye: AI proficiency.",
-"url": "https://techcrunch.com/2023/03/20/chatgpt-ai-startup-valuations/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2020/05/NSussman_Techcrunch_Exchange_v3-GRN.jpg?resize=1200,900",
-"publishedAt": "2023-03-20T15:07:10Z",
-"content": "For many tech companies, investors are applying a new valuation method that has caught our eye: AI proficiency.\r\nThe current wave of AI hype has two main flavors that I’m interested in. First, the st… [+740 chars]"
-}
-]
-}
+# Init
+newsapi = NewsApiClient(api_key='e05f54f819fb43b4b67385072ad1db10')
 
-import streamlit as st
-import json
+# /v2/top-headlines
+top_headlines = newsapi.get_top_headlines(q='bitcoin',
+                                          sources='bbc-news,the-verge',
+                                          category='business',
+                                          language='en',
+                                          country='us')
 
-data = json.loads('''{
-"status": "ok",
-"totalResults": 10,
--"articles": [
--{
--"source": {
-"id": "techcrunch",
-"name": "TechCrunch"
-},
-"author": "Annie Njanja",
-"title": "Meta faces third lawsuit in Kenya as moderators claim illegal sacking, blacklisting",
-"description": "Co-accused Sama, whose clients include OpenAI, dropped Meta’s contract and content review services to concentrate on labeling work.",
-"url": "https://techcrunch.com/2023/03/20/meta-faces-third-lawsuit-in-kenya-as-moderators-claim-illegal-sacking-blacklisting/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2022/10/meta-distorted-glitched.jpg?resize=1200,675",
-"publishedAt": "2023-03-20T18:58:20Z",
-"content": "Social media giant
+# /v2/everything
+all_articles = newsapi.get_everything(q='bitcoin',
+                                      sources='bbc-news,the-verge',
+                                      domains='bbc.co.uk,techcrunch.com',
+                                      from_param='2017-12-01',
+                                      to='2017-12-12',
+                                      language='en',
+                                      sort_by='relevancy',
+                                      page=2)
+
+# /v2/top-headlines/sources
+sources = newsapi.get_sources()
 
 page_names_to_funcs = {
     "Home Page": main_page,
