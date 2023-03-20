@@ -203,7 +203,7 @@ def page2():
 def page3():
     st.markdown("# 3D Printing News 🎉")
     st.sidebar.markdown("# 3D Printing News 🎉")
-	Write the python code to add this news api code into a streamlit app: {
+
 "status": "ok",
 "totalResults": 10,
 -"articles": [
