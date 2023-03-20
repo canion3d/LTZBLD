@@ -178,19 +178,6 @@ font="sans serif"
 
 col1, col2, col3 = st.columns(3)
 
-st.sidebar.header("Apps and Features")
-
-# 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("", ["Upload Model & get Quote", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="vertical",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=817940.369&subid=0&type=4"><IMG border="0"   alt="Microsoft365 for Business" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=817940.369&subid=0&type=4&gridnum=16"></a>
 """, unsafe_allow_html=True)
