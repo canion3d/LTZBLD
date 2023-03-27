@@ -208,18 +208,19 @@ def page3():
     st.markdown("# 3D Printing News 🎉")
     st.sidebar.markdown("# 3D Printing News 🎉")
 	
-from newsapi import NewsApiClient
+import requests
 
-# Init
-newsapi = NewsApiClient(api_key='e05f54f819fb43b4b67385072ad1db10')
+url = "https://api.newscatcherapi.com/v2/search"
 
-# /v2/top-headlines
-top_headlines = newsapi.get_everything(q='3D Printing',
-                                          sources='bbc-news,the-verge',
-                                          language='en',
-					  )
-# /v2/top-headlines/sources
-sources = newsapi.get_sources()
+querystring = {"q":"\"3D Printing\"","lang":"en","sort_by":"relevancy","page":"1"}
+
+headers = {
+    "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)	
 
 page_names_to_funcs = {
     "Home Page": main_page,
