@@ -216,7 +216,7 @@ import json
 import time
 
 # URL of our News API
-base_url = "https://api.newscatcherapi.com/v2/search"
+base_url = "https://api-browser.newscatcherapi.com/?1=MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
 
 # Your API key
 X_API_KEY = 'MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ'
