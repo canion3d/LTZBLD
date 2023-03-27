@@ -29,7 +29,7 @@ selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", 
 )
 
 st.markdown("""
-<a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><img src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
+<a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><IMG border="0"   alt="Mole 3D Scanner" src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
 """, unsafe_allow_html=True)
 
 st.markdown("""
