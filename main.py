@@ -208,6 +208,19 @@ def page3():
     st.markdown("# 3D Printing News 🎉")
     st.sidebar.markdown("# 3D Printing News 🎉")
 
+import requests
+
+url = "https://api.newscatcherapi.com/v2/search"
+
+querystring = {"q":"\"Elon Musk\"","lang":"en","sort_by":"relevancy","page":"1"}
+
+headers = {
+    "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
 
 page_names_to_funcs = {
     "Home Page": main_page,
