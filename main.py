@@ -216,7 +216,10 @@ def fetch_news():
     response = requests.request("GET", url, headers=headers, params=querystring)
     return response.text
 
-st.write(fetch_news())
+# Set the font family and size using HTML tags
+html = f"<div style='font-family: Arial; font-size: 12pt;'>{fetch_news()}</div>"
+# Write the HTML to the Streamlit app
+st.write(html, unsafe_allow_html=True)
 
 page_names_to_funcs = {
     "Home Page": main_page,
