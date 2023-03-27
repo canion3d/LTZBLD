@@ -209,9 +209,9 @@ import streamlit as st
 
 def fetch_news():
     url = "https://api.newscatcherapi.com/v2/search"
-    querystring = {"q":"\"Elon Musk\"","lang":"en","sort_by":"relevancy","page":"1"}
+    querystring = {"q":"\"3D Printing\"","lang":"en","sort_by":"relevancy","page":"1"}
     headers = {
-        "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
+        "x-api-key": "1m114J3QeX2h8UabjijTrWKjTcWhtft-bnHXnUm70QU"
         }
     response = requests.request("GET", url, headers=headers, params=querystring)
     return response.text
