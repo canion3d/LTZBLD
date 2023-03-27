@@ -28,7 +28,7 @@ selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", 
     }
 )
 
-st.markdown("<a href="https://shareasale.com/r.cfm?b=2299301&u=3574798&m=139161&urllink=&afftrack=">Get 42% off Mole 3D Scanner. Shop Now!</a>
+st.markdown("<a href=https://shareasale.com/r.cfm?b=2299301&u=3574798&m=139161&urllink=&afftrack=>Get 42% off Mole 3D Scanner. Shop Now!</a>
 ", unsafe_allow_html=True)
 
 st.markdown("""
