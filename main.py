@@ -205,18 +205,18 @@ def page3():
     st.sidebar.markdown("# 3D Printing News 🎉")
 
 import requests
+import streamlit as st
 
-url = "https://api.newscatcherapi.com/v2/search"
+def fetch_news():
+    url = "https://api.newscatcherapi.com/v2/search"
+    querystring = {"q":"\"Elon Musk\"","lang":"en","sort_by":"relevancy","page":"1"}
+    headers = {
+        "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
+        }
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    return response.text
 
-querystring = {"q":"\"Elon Musk\"","lang":"en","sort_by":"relevancy","page":"1"}
-
-headers = {
-    "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
-    }
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-print(response.text)
+st.write(fetch_news())
 
 page_names_to_funcs = {
     "Home Page": main_page,
