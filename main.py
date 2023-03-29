@@ -78,54 +78,39 @@ def main():
 	st.title("LTZBLD TV")
 
 	st.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
-	
-	import streamlit as st
-import cv2
 
-st.title("LTZBLD Live Stream")
+	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
-uploaded_file = st.file_uploader("Upload video", type=["mp4"])
+	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
 
-if uploaded_file is not None:
-    # OpenCV VideoCapture object
-    cap = cv2.VideoCapture(uploaded_file)
-    
-    # Check if video file was successfully opened
-    if not cap.isOpened():
-        st.error("Unable to open video file.")
-    else:
-        st.success("Video file uploaded and ready to play.")
-        
-        # Play video using OpenCV
-        while True:
-            ret, frame = cap.read()
-            if not ret:
-                st.warning("Video playback completed.")
-                break
-                
-            # Display video frame using Streamlit
-            st.image(frame, channels="BGR")
-            
-        # Release resources
-        cap.release()
+	st.markdown("Start building your dream!")
 
-st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
+	images = ['Picture3.PNG', 'Picture4.png']
 
-st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+	st.sidebar.header("View your model build live!")
 
-st.markdown("Start building your dream!")
+	st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
-images = ['Picture3.PNG', 'Picture4.png']
+	st.sidebar.header("To learn more watch our commercial!")
 
-st.sidebar.header("View your model build live!")
+	st.sidebar.video("3DPaaSgood.mp4")
 
-st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
+	@st.cache(suppress_st_warning=True)
+	def get_fvalue(val):
+		feature_dict = {"No": 1, "Yes": 2}
+		for key, value in feature_dict.items():
+			if val == key:
+				return value
 
-st.sidebar.header("To learn more watch our commercial!")
+	def get_value(val, my_dict):
+		for key, value in my_dict.items():
+			if val == key:
+				return value
 
-st.sidebar.video("3DPaaSgood.mp4")
-
-@st.cache(suppress_st_warning=True)
+	st.markdown(
+		"Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
+		"providing our customers with the best customer service, building our business at a grassroots level, "
+		"and Using our platform and business success to help those who need the most constructive help. ")
 
 	# ---- HIDE STREAMLIT STYLE ----
 	hide_st_style = """
@@ -248,5 +233,3 @@ page_names_to_funcs[selected_page]()
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=817940.369&subid=0&type=4"><IMG border="0"   alt="Microsoft365 for Business" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=817940.369&subid=0&type=4&gridnum=16"></a>
 """, unsafe_allow_html=True)
-
-
