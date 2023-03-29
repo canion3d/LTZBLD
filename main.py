@@ -113,17 +113,17 @@ st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!
 
 st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
 
-	st.markdown("Start building your dream!")
+st.markdown("Start building your dream!")
 
-	images = ['Picture3.PNG', 'Picture4.png']
+images = ['Picture3.PNG', 'Picture4.png']
 
-	st.sidebar.header("View your model build live!")
+st.sidebar.header("View your model build live!")
 
-	st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
+st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
-	st.sidebar.header("To learn more watch our commercial!")
+st.sidebar.header("To learn more watch our commercial!")
 
-	st.sidebar.video("3DPaaSgood.mp4")
+st.sidebar.video("3DPaaSgood.mp4")
 
 	@st.cache(suppress_st_warning=True)
 	def get_fvalue(val):
