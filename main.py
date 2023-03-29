@@ -78,6 +78,37 @@ def main():
 	st.title("LTZBLD TV")
 
 	st.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
+	
+	import streamlit as st
+import cv2
+
+st.title("LTZBLD Live Stream")
+
+uploaded_file = st.file_uploader("Upload video", type=["mp4"])
+
+if uploaded_file is not None:
+    # OpenCV VideoCapture object
+    cap = cv2.VideoCapture(uploaded_file)
+    
+    # Check if video file was successfully opened
+    if not cap.isOpened():
+        st.error("Unable to open video file.")
+    else:
+        st.success("Video file uploaded and ready to play.")
+        
+        # Play video using OpenCV
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                st.warning("Video playback completed.")
+                break
+                
+            # Display video frame using Streamlit
+            st.image(frame, channels="BGR")
+            
+        # Release resources
+        cap.release()
+
 
 	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
