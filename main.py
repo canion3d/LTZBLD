@@ -111,7 +111,7 @@ if uploaded_file is not None:
 
 st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
-	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
 
 	st.markdown("Start building your dream!")
 
