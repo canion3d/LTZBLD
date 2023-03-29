@@ -109,8 +109,7 @@ if uploaded_file is not None:
         # Release resources
         cap.release()
 
-
-	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
 	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
 
