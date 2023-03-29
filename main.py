@@ -127,15 +127,15 @@ st.sidebar.video("3DPaaSgood.mp4")
 
 @st.cache(suppress_st_warning=True)
 def get_fvalue(val):
-feature_dict = {"No": 1, "Yes": 2}
-for key, value in feature_dict.items():
-if val == key:
-return value
+	feature_dict = {"No": 1, "Yes": 2}
+	for key, value in feature_dict.items():
+	if val == key:
+	return value
 
 def get_value(val, my_dict):
-for key, value in my_dict.items():
-if val == key:
-return value
+	for key, value in my_dict.items():
+	if val == key:
+	return value
 
 st.markdown(
 "Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
