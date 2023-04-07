@@ -217,10 +217,10 @@ import requests
 import streamlit as st
 
 def fetch_news():
-    url = "https://api.newscatcherapi.com/v2/search"
-    querystring = {"q":"\"3D Printing\"","lang":"en","sort_by":"relevancy","page":"1"}
+    url = "https://newsapi.org/v2/top-headlines?sources=techcrunch"
+    querystring = {"q":"\"Technology\"","lang":"en","sort_by":"relevancy","page":"1"}
     headers = {
-        "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
+        "x-api-key": "e05f54f819fb43b4b67385072ad1db10"
         }
     response = requests.request("GET", url, headers=headers, params=querystring)
     return response.text
