@@ -217,8 +217,8 @@ def page2():
 # online model viewer courtesy of MIT.
 
 def page3():
-    st.markdown("# 3D Printing News 🎉")
-    st.sidebar.markdown("# 3D Printing News 🎉")
+    st.markdown("# Technology News 🎉")
+    st.sidebar.markdown("# Technology News 🎉")
 
 import requests
 import streamlit as st
@@ -238,8 +238,8 @@ response = requests.get(url, params=params)
 data = response.json()
 
 # display the data in the Streamlit app with formatting
-st.write("# Top News Headlines")
-st.write("Here are the top headlines from the News API for the US:")
+st.write("# Technology News")
+st.write("Here are the top headlines in tech!:")
 for article in data["articles"]:
     st.write("## " + article["title"])
     st.write(article["description"])
