@@ -219,6 +219,9 @@ import streamlit as st
 import streamlit as st
 import requests
 
+import streamlit as st
+import requests
+
 # set the API endpoint and parameters
 url = "https://newsapi.org/v2/top-headlines"
 params = {"country": "us", "apiKey": "e05f54f819fb43b4b67385072ad1db10"}
@@ -227,13 +230,14 @@ params = {"country": "us", "apiKey": "e05f54f819fb43b4b67385072ad1db10"}
 response = requests.get(url, params=params)
 data = response.json()
 
-# display the data in the Streamlit app
-st.write(data)
-
-# Set the font family and size using HTML tags
-html = f"<div style='font-family: Arial; font-size: 12pt;'>{fetch_news()}</div>"
-# Write the HTML to the Streamlit app
-st.write(html, unsafe_allow_html=True)
+# display the data in the Streamlit app with formatting
+st.write("# Top Headlines from the News API")
+st.write("Here are the top headlines from the News API for the US:")
+for article in data["articles"]:
+    st.write("## " + article["title"])
+    st.write(article["description"])
+    st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
+    st.write("---")
 
 def page4():
     st.markdown("# 3D Model Search  ❄️")
