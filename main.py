@@ -17,9 +17,6 @@ from streamlit_option_menu import option_menu
 
 import streamlit as st
 
-# Set the width of the page
-st.set_page_config(page_title="Center Image", page_width=50)
-
 # Display the image centered in the page
 col1, col2, col3 = st.columns(3)
 with col1:
