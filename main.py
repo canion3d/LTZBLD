@@ -77,7 +77,7 @@ def main():
 
 	st.title("LTZBLD TV")
 
-	st.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
+	st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
 	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
@@ -87,9 +87,9 @@ def main():
 
 	images = ['Picture3.PNG', 'Picture4.png']
 
-	st.sidebar.header("View your model build live!")
+	st.sidebar.header("LTZBLD TV!")
 
-	st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
+	st.sidebar.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
 
 	st.sidebar.header("To learn more watch our commercial!")
 
