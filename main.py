@@ -238,7 +238,15 @@ response = requests.get(url, params=params)
 data = response.json()
 
 # display the data in the Streamlit app with formatting
-st.write("# Technology News")
+
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <h1>Technology News</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 st.write("Here are the top headlines in tech:")
 for article in data["articles"]:
     st.write("## " + article["title"])
