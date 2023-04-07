@@ -75,7 +75,7 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("LTZBLD TV")
+	st.title("Watch Your Model Build LIVE when you order a 3D Print from us!")
 
 	st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
