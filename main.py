@@ -18,7 +18,7 @@ from streamlit_option_menu import option_menu
 import streamlit as st
 
 # 1. horizontal menu
-selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
+selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
         icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
         menu_icon="cast", default_index=0, orientation="horizontal",styles={
         "container": {"padding": "0!important", "background-color": "#fafafa"},
