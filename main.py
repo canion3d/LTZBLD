@@ -231,7 +231,7 @@ response = requests.get(url, params=params)
 data = response.json()
 
 # display the data in the Streamlit app with formatting
-st.write("# Top Headlines from the News API")
+st.write("# Top News Headlines")
 st.write("Here are the top headlines from the News API for the US:")
 for article in data["articles"]:
     st.write("## " + article["title"])
