@@ -238,7 +238,7 @@ query = '''
             name
             url
             creator {
-                nick
+                any
             }
         }
     }
