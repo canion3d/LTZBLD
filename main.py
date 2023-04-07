@@ -17,6 +17,8 @@ from streamlit_option_menu import option_menu
 
 import streamlit as st
 
+st.image("LTZBLD_gray.png")
+
 # 1. horizontal menu
 selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
         icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
