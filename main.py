@@ -230,7 +230,7 @@ import streamlit as st
 import requests
 
 # set the API endpoint and parameters
-url = "https://newsapi.org/v2/top-headlines"
+url = "https://newsapi.org/v2/top-headlines?country=us&category=technology"
 params = {"country": "us", "apiKey": "e05f54f819fb43b4b67385072ad1db10"}
 
 # make the API request and retrieve the data
