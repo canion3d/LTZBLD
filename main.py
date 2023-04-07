@@ -17,7 +17,17 @@ from streamlit_option_menu import option_menu
 
 import streamlit as st
 
-st.image("LTZBLD_gray.png")
+# Set the width of the page
+st.set_page_config(page_title="Center Image", page_width=800)
+
+# Display the image centered in the page
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write("")
+with col2:
+    st.image("LTZBLD_gray.png", use_column_width=True)
+with col3:
+    st.write("")
 
 # 1. horizontal menu
 selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
