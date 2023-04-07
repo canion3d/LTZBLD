@@ -239,7 +239,7 @@ data = response.json()
 
 # display the data in the Streamlit app with formatting
 st.write("# Technology News")
-st.write("Here are the top headlines in tech!:")
+st.write("Here are the top headlines in tech:")
 for article in data["articles"]:
     st.write("## " + article["title"])
     st.write(article["description"])
