@@ -221,6 +221,12 @@ html = f"<div style='font-family: Arial; font-size: 12pt;'>{fetch_news()}</div>"
 # Write the HTML to the Streamlit app
 st.write(html, unsafe_allow_html=True)
 
+def page4():
+    st.markdown("# 3D Model Search  ❄️")
+    st.sidebar.markdown("# 3D Model Search ❄️")
+    
+    st.markdown("<h1 style='text-align: center; color: white;'>Search for 3D Models - Courtesy of Cults3D!</h1>" , unsafe_allow_html = True)
+
 page_names_to_funcs = {
     "Home Page": main_page,
     "Model Viewer": page2,
