@@ -231,6 +231,7 @@ page_names_to_funcs = {
     "Home Page": main_page,
     "Model Viewer": page2,
     "Technology News": page3,
+    "3D Model Search": page4,
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
