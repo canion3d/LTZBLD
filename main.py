@@ -226,6 +226,35 @@ def page4():
     st.sidebar.markdown("# 3D Model Search ❄️")
     
     st.markdown("<h1 style='text-align: center; color: white;'>Search for 3D Models - Courtesy of Cults3D!</h1>" , unsafe_allow_html = True)
+	
+import requests
+import streamlit as st
+
+# Define the API endpoint and parameters
+url = 'https://cults3d.com/graphql'
+query = '''
+    {
+        creations(limit: 1) {
+            name
+            url
+            creator {
+                nick
+            }
+        }
+    }
+'''
+auth = ('Canion3DInc', ' LJdIFYtM2RXPxz582uezRhpgg')
+
+# Send a POST request to the API endpoint
+response = requests.post(url, json={'query': query}, auth=auth)
+
+# Parse the JSON response
+if response.ok:
+    data = response.json()['data']
+    st.write(data)
+else:
+    st.error(f'Request failed with status code {response.status_code}.')
+
 
 page_names_to_funcs = {
     "Home Page": main_page,
