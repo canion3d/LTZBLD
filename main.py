@@ -216,14 +216,19 @@ def page3():
 import requests
 import streamlit as st
 
-def fetch_news():
-    url = "https://newsapi.org/v2/top-headlines?country=us"
-    querystring = {"q":"\"Technology\"","lang":"en","sort_by":"relevancy","page":"1"}
-    headers = {
-        "x-api-key": "e05f54f819fb43b4b67385072ad1db10"
-        }
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    return response.text
+import streamlit as st
+import requests
+
+# set the API endpoint and parameters
+url = "https://newsapi.org/v2/top-headlines"
+params = {"country": "us", "apiKey": "e05f54f819fb43b4b67385072ad1db10"}
+
+# make the API request and retrieve the data
+response = requests.get(url, params=params)
+data = response.json()
+
+# display the data in the Streamlit app
+st.write(data)
 
 # Set the font family and size using HTML tags
 html = f"<div style='font-family: Arial; font-size: 12pt;'>{fetch_news()}</div>"
