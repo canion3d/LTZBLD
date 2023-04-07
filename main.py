@@ -84,7 +84,14 @@ def view_all_users():
 def main():
 	"""LTZBLD login"""
 
-	st.title("Watch Your Model Build LIVE when you order a 3D Print from us!")
+	st.markdown(
+    """
+    <div style='text-align: center;'>
+        <h1>Watch Your Model Build LIVE when you order a 3D Print from us!</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 	st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
