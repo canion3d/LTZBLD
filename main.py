@@ -211,7 +211,7 @@ def fetch_news():
     url = "https://api.newscatcherapi.com/v2/search"
     querystring = {"q":"\"3D Printing\"","lang":"en","sort_by":"relevancy","page":"1"}
     headers = {
-        "x-api-key": "e05f54f819fb43b4b67385072ad1db10"
+        "x-api-key": "MrdTeq8_09jPXZuHbxYOmpXGH2ZxgDAr9sILyzyJ9iQ"
         }
     response = requests.request("GET", url, headers=headers, params=querystring)
     return response.text
