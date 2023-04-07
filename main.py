@@ -217,7 +217,7 @@ import requests
 import streamlit as st
 
 def fetch_news():
-    url = "https://newsapi.org/v2/top-headlines?sources=techcrunch"
+    url = "https://newsapi.org/v2/top-headlines?country=us"
     querystring = {"q":"\"Technology\"","lang":"en","sort_by":"relevancy","page":"1"}
     headers = {
         "x-api-key": "e05f54f819fb43b4b67385072ad1db10"
