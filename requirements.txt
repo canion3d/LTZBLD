@@ -159,3 +159,4 @@ yfinance==0.1.74
 zipp==3.8.1
 web3==5.31.1
 ethereum==2.3.2
+pyvista==0.38.5
