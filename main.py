@@ -211,46 +211,6 @@ def page2():
     st.sidebar.markdown("# Model Viewer ❄️")
     
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
-	
-import streamlit as st
-import numpy as np
-import pyvista as pv
-
-# Load 3D model data
-model = pv.read("my_model.obj")
-
-# Define Streamlit app layout
-st.set_page_config(page_title="3D Model Viewer")
-st.title("3D Model Viewer")
-container = st.beta_container()
-row1_col1, row1_col2, row1_col3 = st.beta_columns([1, 1, 3])
-
-# Define camera controls
-with row1_col1:
-    azimuth = st.slider("Azimuth", -180, 180, 0)
-with row1_col2:
-    elevation = st.slider("Elevation", -90, 90, 30)
-with row1_col3:
-    roll = st.slider("Roll", -180, 180, 0)
-
-# Create 3D plot
-plot = pv.Plotter()
-
-# Apply camera controls to 3D plot
-plot.camera_position = [
-    5 * np.cos(np.radians(elevation)) * np.cos(np.radians(azimuth)),
-    5 * np.cos(np.radians(elevation)) * np.sin(np.radians(azimuth)),
-    5 * np.sin(np.radians(elevation)),
-    roll,
-]
-
-# Add 3D model to plot
-plot.add_mesh(model)
-
-# Display 3D plot in Streamlit app
-with container:
-    st.write(plot.show())
-
 
     st.components.v1.iframe("https://3dviewer.net" , width = 1024 , height = 768 , scrolling = True)
 
