@@ -217,7 +217,7 @@ import numpy as np
 import pyvista as pv
 
 # Load 3D model data
-model = pv.read("my_model.stl")
+model = pv.read("my_model.obj")
 
 # Define Streamlit app layout
 st.set_page_config(page_title="3D Model Viewer")
