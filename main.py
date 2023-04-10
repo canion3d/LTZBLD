@@ -38,10 +38,6 @@ selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", 
 )
 
 st.markdown("""
-<a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><IMG border="0"   alt="Mole 3D Scanner" src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
-""", unsafe_allow_html=True)
-
-st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
 """, unsafe_allow_html=True)
 
@@ -215,6 +211,10 @@ def page2():
     st.components.v1.iframe("https://3dviewer.net" , width = 1024 , height = 768 , scrolling = True)
 
 # online model viewer courtesy of MIT.
+
+st.markdown("""
+<a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><IMG border="0"   alt="Mole 3D Scanner" src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
+""", unsafe_allow_html=True)
 
 def page3():
     st.markdown("# Technology News 🎉")
