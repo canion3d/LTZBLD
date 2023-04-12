@@ -263,11 +263,22 @@ def page4():
     st.components.v1.iframe("https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567", width=1024,
                             height=768, scrolling=False)
 
+def page5():
+    st.markdown("# 3D Model Slicer 🎉")
+    st.sidebar.markdown("# 3D Model Slicer 🎉")
+	
+    st.markdown("<h1 style='text-align: center; color: white;'>Slice your 3D Models for your next 3D Print!</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
+	
+#Slicer courtesy of IceSL.	
+
 page_names_to_funcs = {
     "Home Page": main_page,
     "Model Viewer": page2,
     "Technology News": page3,
     "Get a quote and Order a 3D Print": page4,
+    "3D Model Slicer": page5, 	
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
