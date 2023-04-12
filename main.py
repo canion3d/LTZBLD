@@ -402,8 +402,6 @@ if selected == "Upload Model & get Quote":
     st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>",
                 unsafe_allow_html=True)
 
-    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
-
     st.components.v1.iframe("https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567", width=1024,
                             height=768, scrolling=False)
 
