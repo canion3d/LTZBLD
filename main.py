@@ -213,6 +213,10 @@ def page2():
 # online model viewer courtesy of MIT.
 
 st.markdown("""
+<a target="_blank" href="https://shareasale.com/r.cfm?b=1517944&amp;u=3574798&amp;m=57542&amp;urllink=&amp;afftrack="><img src="https://static.shareasale.com/image/57542/generic-300x250-red_00.jpg" border="0" alt="Buy Gold and Silver" /></a>
+""", unsafe_allow_html=True)
+
+st.markdown("""
 <a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><IMG border="0"   alt="Mole 3D Scanner" src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
 """, unsafe_allow_html=True)
 
@@ -286,8 +290,4 @@ page_names_to_funcs[selected_page]()
 
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=817940.369&subid=0&type=4"><IMG border="0"   alt="Microsoft365 for Business" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=817940.369&subid=0&type=4&gridnum=16"></a>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<a target="_blank" href="https://shareasale.com/r.cfm?b=1517944&amp;u=3574798&amp;m=57542&amp;urllink=&amp;afftrack="><img src="https://static.shareasale.com/image/57542/generic-300x250-red_00.jpg" border="0" alt="Buy Gold and Silver" /></a>
 """, unsafe_allow_html=True)
