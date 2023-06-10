@@ -37,11 +37,6 @@ selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", 
     }
 )
 
-if selected2 == "Main":
-    st.experimental_rerun()  # Rerun the app from the beginning (default behavior)
-elif selected2 == "Upload Model":
-    st.experimental_rerun("Upload and Quote.py", run.main)  # Replace "run.py" and "run.main" with the appropriate file and function to run the page
-
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
 """, unsafe_allow_html=True)
