@@ -131,13 +131,12 @@ def main():
 	            </style>
 	            """
 	st.markdown(hide_st_style, unsafe_allow_html=True)
-
+	
+if choice == "Home":
+	st.subheader("Home")
 	st.balloons()
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
-
-if choice == "Home":
-	st.subheader("Home")
 
 elif choice == "Login":
 	st.subheader("Login Section")
