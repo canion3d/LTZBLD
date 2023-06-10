@@ -132,38 +132,40 @@ def main():
 	            """
 	st.markdown(hide_st_style, unsafe_allow_html=True)
 	
-if choice == "Home":
-	st.subheader("Home")
+
 	st.balloons()
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
 
-elif choice == "Login":
-	st.subheader("Login Section")
+	if choice == "Home":
+		st.subheader("Home")
 
-	username = st.sidebar.text_input("User Name")
-	password = st.sidebar.text_input("Password",type='password')
-	if st.sidebar.checkbox("Login"):
-		# if password == '12345':
-		create_usertable()
-		hashed_pswd = make_hashes(password)
+	elif choice == "Login":
+		st.subheader("Login Section")
 
-		result = login_user(username,check_hashes(password,hashed_pswd))
-		if result:
+		username = st.sidebar.text_input("User Name")
+		password = st.sidebar.text_input("Password",type='password')
+		if st.sidebar.checkbox("Login"):
+			# if password == '12345':
+			create_usertable()
+			hashed_pswd = make_hashes(password)
 
-			st.success("Logged In as {}".format(username))
+			result = login_user(username,check_hashes(password,hashed_pswd))
+			if result:
 
-			task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
-			if task == "Add Post":
-				st.subheader("Add Your Post")
+				st.success("Logged In as {}".format(username))
 
-			elif task == "Analytics":
-				st.subheader("Analytics")
-			elif task == "Profiles":
-				st.subheader("User Profiles")
-				user_result = view_all_users()
-				clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
-				st.dataframe(clean_db)
+				task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
+				if task == "Add Post":
+					st.subheader("Add Your Post")
+	
+				elif task == "Analytics":
+					st.subheader("Analytics")
+				elif task == "Profiles":
+					st.subheader("User Profiles")
+					user_result = view_all_users()
+					clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
+					st.dataframe(clean_db)
 			else:
 				st.warning("Incorrect Username/Password")
 
