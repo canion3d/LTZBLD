@@ -158,8 +158,8 @@ elif choice == "Login":
 			if task == "Add Post":
 				st.subheader("Add Your Post")
 
-				elif task == "Analytics":
-					st.subheader("Analytics")
+			elif task == "Analytics":
+				st.subheader("Analytics")
 				elif task == "Profiles":
 					st.subheader("User Profiles")
 					user_result = view_all_users()
