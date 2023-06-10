@@ -147,7 +147,7 @@ elif choice == "Login":
 	if st.sidebar.checkbox("Login"):
 		# if password == '12345':
 		create_usertable()
-			hashed_pswd = make_hashes(password)
+		hashed_pswd = make_hashes(password)
 
 		result = login_user(username,check_hashes(password,hashed_pswd))
 		if result:
