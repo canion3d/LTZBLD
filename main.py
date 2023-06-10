@@ -139,24 +139,24 @@ def main():
 if choice == "Home":
 		st.subheader("Home")
 
-	elif choice == "Login":
-		st.subheader("Login Section")
+elif choice == "Login":
+	st.subheader("Login Section")
 
-		username = st.sidebar.text_input("User Name")
-		password = st.sidebar.text_input("Password",type='password')
-		if st.sidebar.checkbox("Login"):
-			# if password == '12345':
-			create_usertable()
+	username = st.sidebar.text_input("User Name")
+	password = st.sidebar.text_input("Password",type='password')
+	if st.sidebar.checkbox("Login"):
+		# if password == '12345':
+		create_usertable()
 			hashed_pswd = make_hashes(password)
 
-			result = login_user(username,check_hashes(password,hashed_pswd))
-			if result:
+		result = login_user(username,check_hashes(password,hashed_pswd))
+		if result:
 
-				st.success("Logged In as {}".format(username))
+			st.success("Logged In as {}".format(username))
 
-				task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
-				if task == "Add Post":
-					st.subheader("Add Your Post")
+			task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
+			if task == "Add Post":
+				st.subheader("Add Your Post")
 
 				elif task == "Analytics":
 					st.subheader("Analytics")
