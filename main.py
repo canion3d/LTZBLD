@@ -42,9 +42,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<div class="shrsl_ShareASale_productShowCaseTarget_50616"></div>
-<script type="text/javascript" src="https://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=06072023044506"></script>
-<script type="text/javascript">shrsl_ShareASale_liveWid_Init(50616, 3574798, 'shrsl_ShareASale_liveWid_wideSkyScraper_populate');</script>
+<iframe src="https://showcase.shareasale.com/sasmyiframe.php?r=50616&b=3574798&s=0&c=&f=&g=2" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
 """, unsafe_allow_html=True)
 
 # Security
