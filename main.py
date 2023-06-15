@@ -45,7 +45,7 @@ st.markdown("""
 <div class="shrsl_ShareASale_productShowCaseTarget_50616"></div>
 <script type="text/javascript" src="https://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=06072023044506"></script>
 <script type="text/javascript">shrsl_ShareASale_liveWid_Init(50616, 3574798, 'shrsl_ShareASale_liveWid_wideSkyScraper_populate');</script>
-""")
+""", unsafe_allow_html=True)
 
 # Security
 #passlib,hashlib,bcrypt,scrypt
