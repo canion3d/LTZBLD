@@ -41,10 +41,6 @@ st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<iframe src="https://showcase.shareasale.com/sasmyiframe.php?r=50616&b=3574798&s=0&c=&f=&g=2" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
-""", unsafe_allow_html=True)
-
 # Security
 #passlib,hashlib,bcrypt,scrypt
 import hashlib
