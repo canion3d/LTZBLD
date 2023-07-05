@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b9dfb23-fa57-44f2-bdf6-4458fea4d0ee" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/Pages/Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Home.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2J9gxRWavU2tRLNmBVbQ0X245qb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tyrone.Canion/Desktop/Projects/RBI_App&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tyrone.Canion\Desktop\Projects\RBI_App\LTZBLD\Pages" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b9dfb23-fa57-44f2-bdf6-4458fea4d0ee" name="Changes" comment="" />
+      <created>1671495958975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671495958975</updated>
+      <workItem from="1671495961642" duration="6274000" />
+      <workItem from="1674397578904" duration="1048000" />
+      <workItem from="1676972585627" duration="5228000" />
+      <workItem from="1678100362038" duration="3813000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1671648227788</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671648227788</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update">
+      <created>1671648321417</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671648321417</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update">
+      <created>1671648606394</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671648606394</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update">
+      <created>1671649469461</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671649469461</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update">
+      <created>1671654141533</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671654141533</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update">
+      <created>1671655142122</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671655142122</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update">
+      <created>1671656261901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671656261901</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update">
+      <created>1674397774049</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674397774049</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update">
+      <created>1674398049393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674398049393</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update">
+      <created>1674398380979</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674398380979</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update">
+      <created>1674398423104</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674398423104</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update">
+      <created>1676973144923</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676973144923</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update">
+      <created>1676974046556</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676974046556</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update">
+      <created>1676974054917</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676974054917</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update">
+      <created>1676974095136</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676974095136</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update">
+      <created>1678101047630</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678101047630</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Update">
+      <created>1678101486527</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678101486527</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update">
+      <created>1678101773845</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678101773845</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update">
+      <created>1678104727126</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678104727126</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Update">
+      <created>1678104759013</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678104759013</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Update">
+      <created>1678105738940</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678105738940</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Update">
+      <created>1678105873773</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678105873773</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Update">
+      <created>1678106471461</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106471461</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+  </component>
+</project>

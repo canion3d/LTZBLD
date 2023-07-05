@@ -1,5 +1,4 @@
 alpaca==1.0.0
-altair==4.2.0
 anyio==3.6.1
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
@@ -56,13 +55,6 @@ jedi==0.18.1
 Jinja2==3.1.2
 json5==0.9.10
 jsonschema==4.9.1
-jupyter-client==7.3.4
-jupyter-core==4.11.1
-jupyter-server==1.18.1
-jupyterlab==3.4.5
-jupyterlab-pygments==0.2.2
-jupyterlab-widgets==1.1.1
-jupyterlab_server==2.15.1
 kiwisolver==1.4.4
 lxml==4.9.1
 MarkupSafe==2.1.1
@@ -77,6 +69,7 @@ nbclient==0.5.13
 nbconvert==6.5.0
 nbformat==5.4.0
 nest-asyncio==1.5.5
+newsapi-python==0.2.7
 notebook==6.4.12
 notebook-shim==0.1.0
 numpy==1.23.1
@@ -99,7 +92,7 @@ plotly-express==0.4.1
 prettytable==3.4.1
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
-protobuf==3.20.1
+protobuf==3.19.5
 psutil==5.9.1
 pure-eval==0.2.2
 pyarrow==9.0.0
@@ -132,8 +125,6 @@ streamlit-aggrid==0.3.3
 streamlit-echarts==0.4.0
 streamlit-option-menu==0.3.2
 tabulate==0.8.10
-tdameritrade==0.1.1
-tdameritrade-client==0.5.0
 tenacity==8.0.1
 terminado==0.15.0
 tinycss2==1.1.1
@@ -156,7 +147,7 @@ watchdog==2.1.9
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.4.1
-websockets==10.3
+websockets==9.1
 Werkzeug==2.2.1
 widgetsnbextension==3.6.1
 wsproto==1.2.0
@@ -164,3 +155,6 @@ XlsxWriter==3.0.3
 yarg==0.1.9
 yfinance==0.1.74
 zipp==3.8.1
+web3==5.31.1
+ethereum==2.3.2
+pyvista==0.38.5

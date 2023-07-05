@@ -15,12 +15,31 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
-st.set_page_config(
-	layout="wide",
-	page_icon="tada"
-     )
+import streamlit as st
 
-# streamlit_app.py
+# Display the image centered in the page
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write("")
+with col2:
+    st.image("LTZBLD_gray.png", use_column_width=True)
+with col3:
+    st.write("")
+
+# 1. horizontal menu
+selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
+        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
+        menu_icon="cast", default_index=0, orientation="horizontal",styles={
+        "container": {"padding": "0!important", "background-color": "#fafafa"},
+        "icon": {"color": "black", "font-size": "11px"},
+        "nav-link": {"font-size": "11px", "text-align": "left", "margin":"20px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "red"},
+    }
+)
+
+st.markdown("""
+<a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
+""", unsafe_allow_html=True)
 
 # Security
 #passlib,hashlib,bcrypt,scrypt
@@ -56,13 +75,65 @@ def view_all_users():
 	data = c.fetchall()
 	return data
 
-
-
 def main():
 	"""LTZBLD login"""
 
-	st.title("LTZBLD account")
+	st.markdown(
+    """
+    <div style='text-align: center;'>
+        <h1>Watch Your Model Build LIVE when you order a 3D Print from us!</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
+	st.video("https://www.youtube.com/watch?v=obj21YJLScE")
+
+	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
+
+	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+
+	st.markdown("Start building your dream!")
+
+	images = ['Picture3.PNG', 'Picture4.png']
+
+	st.sidebar.header("LTZBLD TV!")
+
+	st.sidebar.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
+
+	st.sidebar.header("To learn more watch our commercial!")
+
+	st.sidebar.video("3DPaaSgood.mp4")
+
+	@st.cache(suppress_st_warning=True)
+	def get_fvalue(val):
+		feature_dict = {"No": 1, "Yes": 2}
+		for key, value in feature_dict.items():
+			if val == key:
+				return value
+
+	def get_value(val, my_dict):
+		for key, value in my_dict.items():
+			if val == key:
+				return value
+
+	st.markdown(
+		"Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
+		"providing our customers with the best customer service, building our business at a grassroots level, "
+		"and Using our platform and business success to help those who need the most constructive help. ")
+
+	# ---- HIDE STREAMLIT STYLE ----
+	hide_st_style = """
+	            <style>
+	            #MainMenu {visibility: hidden;}
+	            footer {visibility: hidden;}
+	            header {visibility: hidden;}
+	            </style>
+	            """
+	st.markdown(hide_st_style, unsafe_allow_html=True)
+	
+
+	st.balloons()
 	menu = ["Home","Login","SignUp"]
 	choice = st.sidebar.selectbox("Menu",menu)
 
@@ -87,7 +158,7 @@ def main():
 				task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
 				if task == "Add Post":
 					st.subheader("Add Your Post")
-
+	
 				elif task == "Analytics":
 					st.subheader("Analytics")
 				elif task == "Profiles":
@@ -97,10 +168,6 @@ def main():
 					st.dataframe(clean_db)
 			else:
 				st.warning("Incorrect Username/Password")
-
-
-
-
 
 	elif choice == "SignUp":
 		st.subheader("Create New Account")
@@ -126,301 +193,100 @@ font="sans serif"
 
 col1, col2, col3 = st.columns(3)
 
-st.sidebar.header("Apps and Features")
-
-# 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("", ["Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="vertical",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
-
-if selected == "Main": ("")
-
-if selected ==  "Upload Model" : ("")
-
-if selected == "Slicer": os.startfile("")
-
-if selected ==  "3DP Analytics" : ("")
-   
-if selected == "Service Bureau Search": ("")
-
-if selected ==  "LTZBLD Blockchain" : ("")
+st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>" , unsafe_allow_html = True)
     
-if selected == "SLS & BinderJet Quote": ("")
-
-
-# 2. horizontal menu
-selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain", "SLS & BinderJet Quote"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="horizontal",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
-
-if selected == "Main": ("")
-
-if selected ==  "Upload Model" : ("")
-
-if selected == "Slicer": ("")
-
-if selected ==  "3DP Analytics" : ("")
-   
-if selected == "Service Bureau Search": ("")
-
-if selected ==  "LTZBLD Blockchain" : ("")
-    
-if selected == "SLS & BinderJet Quote": ("")
-
-st.markdown('Welcome and LTZBLD!' '3DPaaS x Canion3D is the first all-in-one 3D Printing service. We have simplified the process and made it more accessible to everyone. Whether you are a beginner or an expert, our 3D Printing service will meet your needs. Our 3D Printing experts are always on call to walk you through the process, every step of the way.')
-
-# A streamlit app with two centered texts with different seizes
-
-option = st.sidebar.selectbox('Select Feature',['Home','Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote']) #two pages
-
-st.sidebar.header("View your model build live!")
-
-st.sidebar.video("https://www.youtube.com/watch?v=obj21YJLScE")
-
-st.sidebar.header("To learn more watch our commercial!")
-
-st.sidebar.video("3DPaaSgood.mp4")
-
-@st.cache(suppress_st_warning=True)
-def get_fvalue(val):
-    feature_dict = {"No":1,"Yes":2}
-    for key,value in feature_dict.items():
-        if val == key:
-            return value
-
-def get_value(val,my_dict):
-    for key,value in my_dict.items():
-        if val == key:
-            return value
-
-if option == 'Home':
-    st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>" , unsafe_allow_html = True)
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>" , unsafe_allow_html = True)
-    
-    option = st.selectbox(
-     'Select a Feature!',
-     ('Model Viewer','Slicer','3DP Analytics','Service Bureau Connect','Blockchain Service','SLS and BinderJet Quote'))
-
-
-if option == 'Model Viewer':
-    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
-
-#online model viewer courtesy of MIT.
-
-if option == 'Slicer':
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Slice your models using the online slicer</h1>" , unsafe_allow_html = True)
-
-    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
-
-#online slicer courtesy of Slicecrafter is powered by Emscripten.
-
-if option == '3DP Analytics':
-    st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
-
-    st.metric(
-        label = "Available 3D Printers",
-        value = "100"
-    )
-
-    st.line_chart(chart_data = pd.DataFrame(
-        np.random.randn(20,3),
-        columns=["Length","Width","Size"]))
-
-if option == 'Service Bureau Connect':
-    st.markdown("<h1 style='text-align: center; color: white;'>Service Bureau Connect!</h1>" , unsafe_allow_html = True)
-
-    st.markdown("<h1 style='text-align: center; color: white;'>Find a Service Bureau in your area (or anywhere)!</h1>" , unsafe_allow_html = True)
-
-    df = pd.DataFrame(np.random.randn(100 , 2) / [50 , 50] + [42.8864 , -78.8784] ,
-                      columns = ['lat' , 'lon'])
-    st.map(df)
-
-    import requests
-
-    url = "https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions"
-
-    headers = {
-        "X-RapidAPI-Key" : "d29531ae60msh09b292159b1d570p1db262jsnd2039bec5d98" ,
-        "X-RapidAPI-Host" : "wft-geo-db.p.rapidapi.com"
-    }
-
-    response = requests.request("GET" , url , headers = headers)
-
-    print(response.text)
-    
-    st.markdown("<h1 style='text-align: center; color: white;'>Find a Construction 3D Printing Partner! (Coming soon)</h1>" , unsafe_allow_html = True)
-
-if option == 'Blockchain Service':
-	
-# Imports
-   import os
-   import requests
-   from dotenv import load_dotenv
-   load_dotenv()
-   from bip44 import Wallet
-   from web3 import Account
-   from web3 import middleware
-   from web3.gas_strategies.time_based import medium_gas_price_strategy
-   from web3 import Web3
-
-w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
-
-# Create a function called `generate_account` that automates the Ethereum
-# account creation process
-def generate_account(w3):
-    """Create a digital wallet and Ethereum account from a mnemonic seed phrase."""
-    # Access the mnemonic phrase from the `.env` file
-    mnemonic = os.getenv("MNEMONIC")
-
-    # Create Wallet object instance
-    wallet = Wallet(mnemonic)
-
-    # Derive Ethereum private key
-    private, public = wallet.derive_account("eth")
-
-    # Convert private key into an Ethereum account
-    account = Account.privateKeyToAccount(private)
-
-    # Return the account from the function
-    return account
-
-# Create a function called `get_balance` that calls = converts the wei balance of the account to ether, and returns the value of ether
-def get_balance(w3, address):
-    """Using an Ethereum account address access the balance of Ether"""
-    # Get balance of address in Wei
-    wei_balance = w3.eth.get_balance(address)
-
-    # Convert Wei value to ether
-    ether = w3.fromWei(wei_balance, "ether")
-
-    # Return the value in ether
-    return ether
-
-# Create a function called `send_transaction` that creates a raw transaction, signs it, and sends it. Return the confirmation hash from the transaction
-def send_transaction(w3, account, receiver, ether):
-    """Send an authorized transaction."""
-    # Set a medium gas price strategy
-    w3.eth.setGasPriceStrategy(medium_gas_price_strategy)
-
-    # Convert eth amount to Wei
-    wei_value = w3.toWei(ether, "ether")
-
-    # Calculate gas estimate
-    gas_estimate = w3.eth.estimateGas({"to": receiver, "from": account.address, "value": wei_value})
-
-    # Construct a raw transaction
-    raw_tx = {
-        "to": receiver,
-        "from": account.address,
-        "value": wei_value,
-        "gas": gas_estimate,
-        "gasPrice": 0,
-        "nonce": w3.eth.getTransactionCount(account.address)
-    }
-
-    # Sign the raw transaction with ethereum account
-    signed_tx = account.signTransaction(raw_tx)
-
-    # Send the signed transactions
-    return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
-    from web3 import Web3
-    from web3constant.Fantom.Url import FTM_RPC
-
-# Imports
 import streamlit as st
 
-# Import the functions from ethereum.py
-from ethereum import w3, generate_account, get_balance, send_transaction
-from web3 import Web3
+def main_page():
+    st.markdown("# Home page 🎈")
+    st.sidebar.markdown("# Main page 🎈")
 
-w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
-
-# Streamlit application headings
-st.markdown("# Automating Ethereum with Streamlit!")
-
-# Generate the Ethereum account
-account = generate_account(w3)
-
-# The Ethereum Account Address
-st.text("\n")
-st.text("\n")
-st.markdown("## Ethereum Account Address:")
-
-# Write the Ethereum account address to the Streamlit page
-st.write(account.address)
-
-# Display the Etheremum Account balance
-st.text("\n")
-st.text("\n")
-st.markdown("## Ethereum Account Balance:")
-
-# Call the get_balance function and write the account balance to the screen
-ether_balance = get_balance(w3, account.address)
-st.write(ether_balance)
-
-# An Ethereum Transaction
-st.text("\n")
-st.text("\n")
-st.markdown("## An Ethereum Transaction")
-
-# Create inputs for the receiver address and ether amount
-receiver = st.text_input("Input the receiver address")
-ether = st.number_input("Input the amount of ether")
-
-# Create a button that calls the `send_transaction` function and returns the transaction hash
-if st.button("Send Transaction"):
-
-    transaction_hash = send_transaction(w3, account, receiver, ether)
-
-    # Display the Etheremum Transaction Hash
-    st.text("\n")
-    st.text("\n")
-    st.markdown("## Ethereum Transaction Hash:")
-
-    st.write(transaction_hash)
-	
-    w3 = Web3(Web3.HTTPProvider(FTM_RPC))
-    if w3.isConnected():
-         print("Web3 is connected.")
+def page2():
+    st.markdown("# Model Viewer ❄️")
+    st.sidebar.markdown("# Model Viewer ❄️")
     
-    st.markdown("<h1 style='text-align: center; color: white;'>3DPaaS Blockchain Services</h1>" , unsafe_allow_html = True)
+    st.markdown("<h1 style='text-align: center; color: white;'>View Models with the Online Model Viewer</h1>" , unsafe_allow_html = True)
 
-    response = requests.get("http://ws.cex.io/ws")
-    print(response.status_code)
-    Origin: 'wss.cex.io'
-    def create_signature(key , secret) :  # (string key, string secret)
-        timestamp = int(datetime.datetime.now().timestamp())  # UNIX timestamp in seconds
-        string = "{}{}".format(timestamp , key)
-        return timestamp , hmac.new(secret.encode() , string.encode() , hashlib.sha256).hexdigest()
+    st.components.v1.iframe("https://3dviewer.net" , width = 1024 , height = 768 , scrolling = True)
 
+# online model viewer courtesy of MIT.
 
-    def auth_request(key , secret) :
-        timestamp , signature = create_signature(key , secret)
-        return json.dumps({'e' : 'auth' ,
-                           'auth' : {'key' : key , 'signature' : signature , 'timestamp' : timestamp , } ,
-                           'oid' : 'auth' , })
+st.markdown("""
+<a target="_blank" href="https://shareasale.com/r.cfm?b=1517944&amp;u=3574798&amp;m=57542&amp;urllink=&amp;afftrack="><img src="https://static.shareasale.com/image/57542/generic-300x250-red_00.jpg" border="0" alt="Buy Gold and Silver" /></a>
+""", unsafe_allow_html=True)
 
+st.markdown("""
+<a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><IMG border="0"   alt="Mole 3D Scanner" src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
+""", unsafe_allow_html=True)
 
-    auth_request = auth_request('oaytt8u0ONzCdcgIhwVzO1CCFmM' , 'rzI00GQWhW9NlIEQ5fNCvG7pxo')
+def page3():
+    st.markdown("# Technology News 🎉")
+    st.sidebar.markdown("# Technology News 🎉")
 
-if option == 'SLS and BinderJet Quote':
-    st.markdown("<h1 style='text-align: center; color: white;'>SLS and BinderJet Quote</h1>" , unsafe_allow_html = True)
+import requests
+import streamlit as st
 
-    st.components.v1.iframe("https://trin.do/demand/" , width = 1000  , height = 1000 , scrolling = True)
+import streamlit as st
+import requests
+
+import streamlit as st
+import requests
+
+# set the API endpoint and parameters
+url = "https://newsapi.org/v2/top-headlines?country=us&category=technology"
+params = {"country": "us", "apiKey": "e05f54f819fb43b4b67385072ad1db10"}
+
+# make the API request and retrieve the data
+response = requests.get(url, params=params)
+data = response.json()
+
+# display the data in the Streamlit app with formatting
+
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <h1>Technology News</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.write("Here are the top headlines in tech:")
+for article in data["articles"]:
+    st.write("## " + article["title"])
+    st.write(article["description"])
+    st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
+    st.write("---")
+
+def page4():
+    st.markdown("# Order a 3D Print  ❄️")
+    st.sidebar.markdown("# Order a 3D Print ❄️")
+    
+    st.markdown("<h1 style='text-align: center; color: white;'>Get a quote and Order a 3D Print!</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567", width=1024,
+                            height=768, scrolling=False)
+
+def page5():
+    st.markdown("# 3D Model Slicer 🎉")
+    st.sidebar.markdown("# 3D Model Slicer 🎉")
+	
+    st.markdown("<h1 style='text-align: center; color: white;'>Slice your 3D Models for your next 3D Print!</h1>" , unsafe_allow_html = True)
+
+    st.components.v1.iframe("https://icesl.loria.fr/webprinter/", width=1600, height=1600, scrolling=True)
+	
+#Slicer courtesy of IceSL.	
+
+page_names_to_funcs = {
+    "Home Page": main_page,
+    "Model Viewer": page2,
+    "Technology News": page3,
+    "Get a quote and Order a 3D Print": page4,
+    "3D Model Slicer": page5, 	
+}
+
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+page_names_to_funcs[selected_page]()
+
+st.markdown("""
+<a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=817940.369&subid=0&type=4"><IMG border="0"   alt="Microsoft365 for Business" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=817940.369&subid=0&type=4&gridnum=16"></a>
+""", unsafe_allow_html=True)
