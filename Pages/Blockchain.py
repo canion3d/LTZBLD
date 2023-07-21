@@ -58,7 +58,7 @@ st.bar_chart(bar_data)
 
 import streamlit as st
 
-run_button = st.button(
+run_button = st.button("Connect to Metamask")
     text='Connect Wallet',
     font_size=15,
     font_family='Arial',
