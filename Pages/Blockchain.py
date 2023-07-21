@@ -54,25 +54,43 @@ st.write("Blockchain data:")
 bar_data = np.random.rand(10)
 st.bar_chart(bar_data)
 
-# Create the button
-
 import streamlit as st
 
-run_button = st.button("Connect to Metamask")
-text='Connect Wallet',
-font_size=15,
-font_family='Arial',
-background_color='#0086b3',
-border_color='#0086b3',
-border_width=1
+def main():
+    st.title("Connect to crypto wallet")
 
-# On button click, connect the Metamask wallet
-@button.on_click
-def connect_metamask():
-    # Connect Metamask
-    web3.eth.enable_metamask()
-    # Display a success message
-    st.write("Successfully connected to Metamask wallet!")
+    # HTML code
+    st.components.v1.html(
+        """
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+        <input type="button" value="Connect Wallet" id="connectBtn">
+        """
+    )
+
+    # JavaScript code
+    jscode = """
+    /* To connect using MetaMask */
+    async function connect() {
+      if (window.ethereum) {
+         await window.ethereum.request({ method: "eth_requestAccounts" });
+         window.web3 = new Web3(window.ethereum);
+         const account = web3.eth.accounts;
+         //Get the current MetaMask selected/active wallet
+         const walletAddress = account.givenProvider.selectedAddress;
+         console.log(`Wallet: ${walletAddress}`);
+      } else {
+       console.log("No wallet");
+      }
+    }
+
+    document.getElementById('connectBtn').onclick = connect;
+    """
+
+    st.components.v1.jscode(jscode)
+
+
+if __name__ == "__main__":
+    main()
 
 st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>", unsafe_allow_html=True)
 
