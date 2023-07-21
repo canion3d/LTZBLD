@@ -67,7 +67,6 @@ run_button = st.button(
     border_width=1
     )
 
-
 # On button click, connect the Metamask wallet
 @button.on_click
 def connect_metamask():
