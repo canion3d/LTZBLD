@@ -59,13 +59,12 @@ st.bar_chart(bar_data)
 import streamlit as st
 
 run_button = st.button("Connect to Metamask")
-    text='Connect Wallet',
-    font_size=15,
-    font_family='Arial',
-    background_color='#0086b3',
-    border_color='#0086b3',
-    border_width=1
-    )
+text='Connect Wallet',
+font_size=15,
+font_family='Arial',
+background_color='#0086b3',
+border_color='#0086b3',
+border_width=1
 
 # On button click, connect the Metamask wallet
 @button.on_click
@@ -73,7 +72,7 @@ def connect_metamask():
     # Connect Metamask
     web3.eth.enable_metamask()
     # Display a success message
-    print("Successfully connected to Metamask wallet!")
+    st.write("Successfully connected to Metamask wallet!")
 
 st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>", unsafe_allow_html=True)
 
