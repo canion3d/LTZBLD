@@ -55,7 +55,7 @@ selected_pages = st.multiselect("Select LTZBLD Features", page_files)
 
 # Execute the selected pages
 for selected_page in selected_pages:
-    exec(open(f"Pages/{selected_page}").read())
+exec(open(f"Pages/{selected_page}").read())
 
 # Security
 #passlib,hashlib,bcrypt,scrypt
