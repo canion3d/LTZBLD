@@ -51,7 +51,7 @@ page_files = os.listdir("Pages")
 page_files = [file for file in page_files if file.endswith(".py")]
 
 # Add a menu item to select pages
-selected_pages = st.multiselect("Select Trade Cipher Features", page_files)
+selected_pages = st.multiselect("Select LTZBLD Features", page_files)
 
 # Execute the selected pages
 for selected_page in selected_pages:
