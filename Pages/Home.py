@@ -56,8 +56,6 @@ def view_all_users():
 	data = c.fetchall()
 	return data
 
-
-
 def main():
 	"""LTZBLD login"""
 
