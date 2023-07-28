@@ -20,6 +20,10 @@ st.set_page_config(
     page_icon = "tada"
 )
 
+st.markdown("""
+<a href="https://click.linksynergy.com/fs-bin/click?id=hSfq74o5fUQ&offerid=944100.42&bids=944100.42&subid=0&type=4"><IMG border="0" alt="Unstoppable Domains" src="https://ad.linksynergy.com/fs-bin/show?id=hSfq74o5fUQ&offerid=944100.42&bids=944100.42&subid=0&type=4&gridnum=13"></a>
+""", unsafe_allow_html=True)
+
 from moralis import evm_api
 
 api_key = "9E7gJnfD3salEVXsS9WkWPqMjtf7NGMZPj2IsADvwgB5tfxt38Qtio83Slq6tOYJ"
