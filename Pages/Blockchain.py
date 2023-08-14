@@ -20,6 +20,38 @@ st.set_page_config(
     page_icon = "tada"
 )
 
+import streamlit as st
+
+def main():
+    st.title("Connect your crypto wallet")
+
+    # HTML code
+    st.components.v1.html(
+        """
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
+        <input type="button" value="Connect Wallet" id="connectBtn">
+        """
+    )
+
+    # JavaScript code
+    jscode = """
+    /* To connect using MetaMask */
+    async function connect() {
+      if (window.ethereum) {
+         await window.ethereum.request({ method: "eth_requestAccounts" });
+         window.web3 = new Web3(window.ethereum);
+         const account = web3.eth.accounts;
+         //Get the current MetaMask selected/active wallet
+         const walletAddress = account.givenProvider.selectedAddress;
+         console.log(`Wallet: ${walletAddress}`);
+      } else {
+       console.log("No wallet");
+      }
+    }
+
+    document.getElementById('connectBtn').onclick = connect;
+    """
+
 from moralis import evm_api
 
 api_key = "9E7gJnfD3salEVXsS9WkWPqMjtf7NGMZPj2IsADvwgB5tfxt38Qtio83Slq6tOYJ"
@@ -53,41 +85,6 @@ st.line_chart(chart_data)
 st.write("Blockchain data:")
 bar_data = np.random.rand(10)
 st.bar_chart(bar_data)
-
-import streamlit as st
-
-def main():
-    st.title("Connect to crypto wallet")
-
-    # HTML code
-    st.components.v1.html(
-        """
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
-        <input type="button" value="Connect Wallet" id="connectBtn">
-        """
-    )
-
-    # JavaScript code
-    jscode = """
-    /* To connect using MetaMask */
-    async function connect() {
-      if (window.ethereum) {
-         await window.ethereum.request({ method: "eth_requestAccounts" });
-         window.web3 = new Web3(window.ethereum);
-         const account = web3.eth.accounts;
-         //Get the current MetaMask selected/active wallet
-         const walletAddress = account.givenProvider.selectedAddress;
-         console.log(`Wallet: ${walletAddress}`);
-      } else {
-       console.log("No wallet");
-      }
-    }
-
-    document.getElementById('connectBtn').onclick = connect;
-    """
-
-    st.components.v1.jscode(jscode)
-
 
 if __name__ == "__main__":
     main()

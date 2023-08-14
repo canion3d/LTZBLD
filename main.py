@@ -14,8 +14,9 @@ import sqlite3
 from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
+from st_paywall import add_auth
 
-import streamlit as st
+add_auth(required=True)
 
 # Display the image centered in the page
 col1, col2, col3 = st.columns(3)
@@ -223,13 +224,6 @@ def page3():
     st.markdown("# Technology News 🎉")
     st.sidebar.markdown("# Technology News 🎉")
 
-import requests
-import streamlit as st
-
-import streamlit as st
-import requests
-
-import streamlit as st
 import requests
 
 # set the API endpoint and parameters
