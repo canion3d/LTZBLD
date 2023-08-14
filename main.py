@@ -14,7 +14,7 @@ import sqlite3
 from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
-from st_paywall import add_auth
+from st_paywall import auth
 
 add_auth(required=True)
 
