@@ -18,6 +18,23 @@ from streamlit_option_menu import option_menu
 import streamlit as st
 from st_paywall import add_auth
 
+@add_auth(required=True)
+def restricted_content():
+    st.write("This content is restricted. You need to log in.")
+
+restricted_content()
+
+add_auth(required=True)
+
+# Display the image centered in the page
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write("")
+with col2:
+    st.image("LTZBLD_gray.png", use_column_width=True)
+with col3:
+    st.write("")
+
 st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
 	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
@@ -35,25 +52,6 @@ st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 	st.sidebar.header("To learn more watch our commercial!")
 
 	st.sidebar.video("3DPaaSgood.mp4")
-
-# Decorate the function you want to restrict with authentication
-@add_auth(required=True)
-def restricted_content():
-    st.write("This content is restricted. You need to log in.")
-
-# Use the restricted function
-restricted_content()
-
-add_auth(required=True)
-
-# Display the image centered in the page
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.write("")
-with col2:
-    st.image("LTZBLD_gray.png", use_column_width=True)
-with col3:
-    st.write("")
 
 # 1. horizontal menu
 selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
