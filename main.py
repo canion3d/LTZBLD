@@ -14,8 +14,17 @@ import sqlite3
 from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
-import st_paywall
-import auth
+
+import streamlit as st
+from st_paywall import add_auth
+
+# Decorate the function you want to restrict with authentication
+@add_auth(required=True)
+def restricted_content():
+    st.write("This content is restricted. You need to log in.")
+
+# Use the restricted function
+restricted_content()
 
 add_auth(required=True)
 
