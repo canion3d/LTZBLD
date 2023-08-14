@@ -15,11 +15,6 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
-st.set_page_config(
-    layout = "wide" ,
-    page_icon = "tada"
-)
-
 st.markdown("<h1 style='text-align: center; color: blue;'>View local and network 3D Printing data</h1" , unsafe_allow_html = True)
 
 st.metric(
