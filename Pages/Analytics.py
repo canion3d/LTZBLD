@@ -27,13 +27,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the printing report data into a pandas DataFrame
-df = pd.read_csv('printing_report.csv')
+df = pd.read_csv('C:\\Users\\Tyrone.Canion\\Documents\\GitHub\\LTZBLD\\printing_report.csv')
 
 # Show the data in a table
 st.dataframe(df)
 
 # Create a chart of the data
-st.line_chart(df)
+st.pydeck_chart(df)
 
 # Add a title to the chart
 st.title("Printing Report Chart")

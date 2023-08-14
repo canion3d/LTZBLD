@@ -18,6 +18,24 @@ from streamlit_option_menu import option_menu
 import streamlit as st
 from st_paywall import add_auth
 
+st.video("https://www.youtube.com/watch?v=obj21YJLScE")
+
+	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
+
+	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+
+	st.markdown("Start building your dream!")
+
+	images = ['Picture3.PNG', 'Picture4.png']
+
+	st.sidebar.header("LTZBLD TV!")
+
+	st.sidebar.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
+
+	st.sidebar.header("To learn more watch our commercial!")
+
+	st.sidebar.video("3DPaaSgood.mp4")
+
 # Decorate the function you want to restrict with authentication
 @add_auth(required=True)
 def restricted_content():
@@ -52,43 +70,6 @@ st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
 """, unsafe_allow_html=True)
 
-# Security
-#passlib,hashlib,bcrypt,scrypt
-import hashlib
-def make_hashes(password):
-	return hashlib.sha256(str.encode(password)).hexdigest()
-
-def check_hashes(password,hashed_text):
-	if make_hashes(password) == hashed_text:
-		return hashed_text
-	return False
-# DB Management
-import sqlite3 
-conn = sqlite3.connect('3DPASS.db')
-c = conn.cursor()
-# DB  Functions
-def create_usertable():
-	c.execute('CREATE TABLE IF NOT EXISTS userstable(username TEXT,password TEXT)')
-
-
-def add_userdata(username,password):
-	c.execute('INSERT INTO userstable(username,password) VALUES (?,?)',(username,password))
-	conn.commit()
-
-def login_user(username,password):
-	c.execute('SELECT * FROM userstable WHERE username =? AND password = ?',(username,password))
-	data = c.fetchall()
-	return data
-
-
-def view_all_users():
-	c.execute('SELECT * FROM userstable')
-	data = c.fetchall()
-	return data
-
-def main():
-	"""LTZBLD login"""
-
 	st.markdown(
     """
     <div style='text-align: center;'>
@@ -97,24 +78,6 @@ def main():
     """,
     unsafe_allow_html=True
 )
-
-	st.video("https://www.youtube.com/watch?v=obj21YJLScE")
-
-	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
-
-	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
-
-	st.markdown("Start building your dream!")
-
-	images = ['Picture3.PNG', 'Picture4.png']
-
-	st.sidebar.header("LTZBLD TV!")
-
-	st.sidebar.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
-
-	st.sidebar.header("To learn more watch our commercial!")
-
-	st.sidebar.video("3DPaaSgood.mp4")
 
 	@st.cache(suppress_st_warning=True)
 	def get_fvalue(val):
