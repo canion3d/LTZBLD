@@ -15,7 +15,7 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 import st_paywall
-from st_paywall import auth
+import auth
 
 add_auth(required=True)
 
