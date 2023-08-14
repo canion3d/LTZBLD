@@ -56,8 +56,6 @@ def view_all_users():
 	data = c.fetchall()
 	return data
 
-
-
 def main():
 	"""LTZBLD login"""
 
@@ -126,35 +124,17 @@ st.sidebar.header("Apps and Features")
 
 # 1. as sidebar menu
 with st.sidebar:
-    selected = option_menu("", ["Upload Model & get Quote", "3D Slicer", "3DP Analytics", "Service Bureau Search", "LTZBLD Blockchain"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="vertical",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "orange", "font-size": "15px"},
-        "nav-link": {"font-size": "15px", "text-align": "left", "margin":"10px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
+	
+    # List available page files
+page_files = os.listdir("Pages")
+page_files = [file for file in page_files if file.endswith(".py")]
 
-if selected == "Upload Model & get Quote": os.startfile ("Upload and Quote.py")
+# Add a menu item to select pages
+selected_pages = st.multiselect("Select LTZBLD Features", page_files)
 
-if selected == "3D Slicer": os.startfile("Slicer.py")
-
-if selected == "3DP Analytics" : os.startfile("Analytics.py")
-
-if selected == "Service Bureau Search" : os.startfile("Service Bureaus.py")
-
-if selected == "LTZBLD Blockchain" : os.startfile("Blockchain.py")
-
-st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Home</h1>", unsafe_allow_html=True)
-
-st.markdown("<h1 style='text-align: center; color: white;'>Welcome! Select a menu feature to get started!</h1>",
-			unsafe_allow_html=True)
-
-option = st.selectbox(
-	'Select a Feature!',
-	('Model Viewer', 'Slicer', '3DP Analytics', 'Service Bureau Connect', 'Blockchain Service',
-	 'SLS and BinderJet Quote'))
+# Execute the selected pages
+for selected_page in selected_pages:
+    exec(open(f"Pages/{selected_page}").read())
 
 st.write("""
 <style>
