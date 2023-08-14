@@ -26,8 +26,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="Printing Report", page_icon=":guardsman:", layout="wide")
-
 # Read the printing report data into a pandas DataFrame
 df = pd.read_csv('printing_report.csv')
 
