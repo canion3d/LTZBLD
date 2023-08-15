@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b9dfb23-fa57-44f2-bdf6-4458fea4d0ee" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="9b9dfb23-fa57-44f2-bdf6-4458fea4d0ee" name="Changes" comment="Update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +76,7 @@
       <workItem from="1692022890006" duration="306000" />
       <workItem from="1692030426190" duration="40000" />
       <workItem from="1692033811626" duration="2083000" />
+      <workItem from="1692123589194" duration="369000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1671648227788</created>
@@ -317,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692036312068</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Update">
+      <created>1692123726453</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1692123726453</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
