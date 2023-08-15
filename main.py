@@ -19,8 +19,9 @@ import streamlit as st
 from st_paywall import add_auth
 
 @add_auth(required=True)
+
 def restricted_content():
-    st.write("This content is restricted. You need to log in.")
+	st.write("This content is restricted. You need to log in.")
 
 restricted_content()
 
