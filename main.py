@@ -16,16 +16,30 @@ from pip._internal import main
 from streamlit_option_menu import option_menu
 
 import streamlit as st
-from st_paywall import add_auth
+from st_paywall import add_auth, require_auth
 
-@add_auth(required=True)
-
-def restricted_content():
-	st.write("This content is restricted. You need to log in.")
-
-restricted_content()
-
+# Apply the add_auth decorator to the entire app to enable authentication
 add_auth(required=True)
+
+# Define the logout logic
+def logout():
+    # Implement your logout logic here, e.g., clearing authentication status
+    # For demonstration purposes, I'm setting a session variable to simulate logout
+    st.session_state.authenticated = False
+
+# Streamlit app layout
+def main():
+    # Sidebar with a button to log out
+    if st.sidebar.button("Logout"):
+        logout()
+        st.write("You have been logged out.")
+
+    # Main content area
+    st.write("Welcome to the authenticated content!")
+    st.write("This is only visible when authenticated.")
+
+if __name__ == "__main__":
+    main()
 
 # Display the image centered in the page
 col1, col2, col3 = st.columns(3)
