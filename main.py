@@ -29,21 +29,21 @@ with col3:
 
 st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
-	st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
-	st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
 
-	st.markdown("Start building your dream!")
+st.markdown("Start building your dream!")
 
-	images = ['Picture3.PNG', 'Picture4.png']
+images = ['Picture3.PNG', 'Picture4.png']
 
-	st.sidebar.header("LTZBLD TV!")
+st.sidebar.header("LTZBLD TV!")
 
-	st.sidebar.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
+st.sidebar.video("https://www.youtube.com/watch?v=cdOe5wcfVJo")
 
-	st.sidebar.header("To learn more watch our commercial!")
+st.sidebar.header("To learn more watch our commercial!")
 
-	st.sidebar.video("3DPaaSgood.mp4")
+st.sidebar.video("3DPaaSgood.mp4")
 
 # 1. horizontal menu
 selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
