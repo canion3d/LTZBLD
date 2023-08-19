@@ -16,7 +16,7 @@ from pip._internal import main
 from streamlit_option_menu import option_menu
 
 import streamlit as st
-from st_paywall import add_auth, require_auth
+#from st_paywall import add_auth, require_auth
 
 # Display the image centered in the page
 col1, col2, col3 = st.columns(3)
