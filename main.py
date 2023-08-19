@@ -69,67 +69,67 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-	@st.cache(suppress_st_warning=True)
-	def get_fvalue(val):
-		feature_dict = {"No": 1, "Yes": 2}
-		for key, value in feature_dict.items():
-			if val == key:
-				return value
+@st.cache(suppress_st_warning=True)
+def get_fvalue(val):
+	feature_dict = {"No": 1, "Yes": 2}
+	for key, value in feature_dict.items():
+		if val == key:
+			return value
 
 	def get_value(val, my_dict):
 		for key, value in my_dict.items():
 			if val == key:
 				return value
 
-	st.markdown(
-		"Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
-		"providing our customers with the best customer service, building our business at a grassroots level, "
-		"and Using our platform and business success to help those who need the most constructive help. ")
+st.markdown(
+	"Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
+	"providing our customers with the best customer service, building our business at a grassroots level, "
+	"and Using our platform and business success to help those who need the most constructive help. ")
 
-	# ---- HIDE STREAMLIT STYLE ----
-	hide_st_style = """
-	            <style>
-	            #MainMenu {visibility: hidden;}
-	            footer {visibility: hidden;}
-	            header {visibility: hidden;}
-	            </style>
-	            """
-	st.markdown(hide_st_style, unsafe_allow_html=True)
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+	<style>
+	#MainMenu {visibility: hidden;}
+	footer {visibility: hidden;}
+	header {visibility: hidden;}
+	</style>
+	"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
 	
 
-	st.balloons()
-	menu = ["Home","Login","SignUp"]
-	choice = st.sidebar.selectbox("Menu",menu)
+st.balloons()
+menu = ["Home","Login","SignUp"]
+choice = st.sidebar.selectbox("Menu",menu)
 
-	if choice == "Home":
-		st.subheader("Home")
+if choice == "Home":
+	st.subheader("Home")
 
-	elif choice == "Login":
-		st.subheader("Login Section")
+elif choice == "Login":
+	st.subheader("Login Section")
 
-		username = st.sidebar.text_input("User Name")
-		password = st.sidebar.text_input("Password",type='password')
-		if st.sidebar.checkbox("Login"):
-			# if password == '12345':
-			create_usertable()
-			hashed_pswd = make_hashes(password)
+	username = st.sidebar.text_input("User Name")
+	password = st.sidebar.text_input("Password",type='password')
+	if st.sidebar.checkbox("Login"):
+		# if password == '12345':
+		create_usertable()
+		hashed_pswd = make_hashes(password)
 
-			result = login_user(username,check_hashes(password,hashed_pswd))
-			if result:
+		result = login_user(username,check_hashes(password,hashed_pswd))
+		if result:
 
-				st.success("Logged In as {}".format(username))
+			st.success("Logged In as {}".format(username))
 
-				task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
-				if task == "Add Post":
-					st.subheader("Add Your Post")
+			task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
+			if task == "Add Post":
+				st.subheader("Add Your Post")
 	
-				elif task == "Analytics":
-					st.subheader("Analytics")
-				elif task == "Profiles":
-					st.subheader("User Profiles")
-					user_result = view_all_users()
-					clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
-					st.dataframe(clean_db)
+			elif task == "Analytics":
+				st.subheader("Analytics")
+			elif task == "Profiles":
+				st.subheader("User Profiles")
+				user_result = view_all_users()
+				clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
+				st.dataframe(clean_db)
 			else:
 				st.warning("Incorrect Username/Password")
 
