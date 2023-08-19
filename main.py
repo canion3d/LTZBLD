@@ -147,7 +147,6 @@ elif choice == "Login":
 
 
 if __name__ == '__main__':
-	main()
 
 primaryColor="#F63366"
 backgroundColor="#DDDDDD"
