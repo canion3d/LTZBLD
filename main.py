@@ -148,11 +148,11 @@ elif choice == "Login":
 
 if __name__ == '__main__':
 
-primaryColor="#F63366"
-backgroundColor="#DDDDDD"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
-font="sans serif"
+	primaryColor="#F63366"
+	backgroundColor="#DDDDDD"
+	secondaryBackgroundColor="#F0F2F6"
+	textColor="#262730"
+	font="sans serif"
 
 col1, col2, col3 = st.columns(3)
 
