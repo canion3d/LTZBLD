@@ -207,7 +207,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.write("Here are the top headlines in tech:")
-    for article in data["articles"]:
+for article in data["articles"]:
         st.write("## " + article["title"])
         st.write(article["description"])
         st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
