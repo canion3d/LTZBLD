@@ -207,12 +207,13 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.write("Here are the top headlines in tech:")
-for article in data["articles"]:
-    st.write("## " + article["title"])
-    st.write(article["description"])
-    st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
-    st.write("---")
-
+    for article in data["articles"]:
+        st.write("## " + article["title"])
+        st.write(article["description"])
+        st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
+        st.write(f"URL: {article['url']}")  # Display the source URL
+        st.write("---")
+	    
 def page4():
     st.markdown("# Order a 3D Print  ❄️")
     st.sidebar.markdown("# Order a 3D Print ❄️")
