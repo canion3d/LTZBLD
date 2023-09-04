@@ -35,6 +35,22 @@ st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
 
 st.markdown("Start building your dream!")
 
+# Add divider line
+st.markdown("---")
+
+st.markdown("<h2 style='text-align: center; color: white;'>Select a dashboard to get started: </h2>", unsafe_allow_html=True)
+
+# List available page files
+page_files = os.listdir("Pages")
+page_files = [file for file in page_files if file.endswith(".py")]
+
+# Add a menu item to select pages
+selected_pages = st.multiselect("Select Trade Cipher Features", page_files)
+
+# Execute the selected pages
+for selected_page in selected_pages:
+    exec(open(f"Pages/{selected_page}").read())
+
 images = ['Picture3.PNG', 'Picture4.png']
 
 st.sidebar.header("LTZBLD TV!")
