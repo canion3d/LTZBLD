@@ -45,17 +45,6 @@ st.sidebar.header("To learn more watch our commercial!")
 
 st.sidebar.video("3DPaaSgood.mp4")
 
-# 1. horizontal menu
-selected2 = option_menu("", ["Main", "Upload Model", "Slicer", "3DP Analytics", "3D Model Search", "LTZBLD Blockchain"],
-        icons=['house', 'cloud-upload', 'menu-app', 'menu-app','menu-app', 'menu-app', 'menu-app'],
-        menu_icon="cast", default_index=0, orientation="horizontal",styles={
-        "container": {"padding": "0!important", "background-color": "#fafafa"},
-        "icon": {"color": "black", "font-size": "11px"},
-        "nav-link": {"font-size": "11px", "text-align": "left", "margin":"20px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "red"},
-    }
-)
-
 st.markdown("""
 <a href="https://click.linksynergy.com/fs-bin/click?id=8WC05bHq4DI&offerid=1207190.332&subid=0&type=4"><IMG border="0"   alt="Newegg" src="https://ad.linksynergy.com/fs-bin/show?id=8WC05bHq4DI&bids=1207190.332&subid=0&type=4&gridnum=1"></a>
 """, unsafe_allow_html=True)
