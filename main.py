@@ -34,12 +34,15 @@ page_files = os.listdir("Pages")
 page_files = [file for file in page_files if file.endswith(".py")]
 
 # Add a menu item to select pages
-selected_pages = st.multiselect("Select Trade Cipher Features", page_files)
+selected_pages = st.multiselect("Select LTZBLD Features", page_files)
 
 # Execute the selected pages
 for selected_page in selected_pages:
-    exec(open(f"Pages/{selected_page}").read())
-
+    try:
+        exec(open(f"Pages/{selected_page}").read())
+    except Exception as e:
+        st.error(f"An error occurred while loading page '{selected_page}': {e}")
+	    
 st.video("https://www.youtube.com/watch?v=obj21YJLScE")
 
 st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
