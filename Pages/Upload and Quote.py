@@ -140,5 +140,5 @@ if selected == "Upload Model & get Quote":
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
-    st.components.v1.iframe("https://www.treatstock.com/order-upload/widget?posUid=fixedPs&psId=3567", width=1024,
+    st.components.v1.iframe("https://canion3d.com/3d-printing-service/", width=1024,
                             height=768, scrolling=False)
