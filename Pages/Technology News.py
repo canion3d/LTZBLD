@@ -30,6 +30,45 @@ def get_value(val, my_dict):
         if val == key:
             return value
 
+st.markdown("""
+<a target="_blank" href="https://shareasale.com/r.cfm?b=1517944&amp;u=3574798&amp;m=57542&amp;urllink=&amp;afftrack="><img src="https://static.shareasale.com/image/57542/generic-300x250-red_00.jpg" border="0" alt="Buy Gold and Silver" /></a>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<a href="https://shareasale.com/u.cfm?d=1007382&amp;m=139161&amp;u=3574798&amp;afftrack="><IMG border="0"   alt="Mole 3D Scanner" src="https://static.shareasale.com/image/139161/00-1975x250_00.png" border="0" /></a>
+""", unsafe_allow_html=True)
+
+def page3():
+    st.markdown("# Technology News 🎉")
+    st.sidebar.markdown("# Technology News 🎉")
+
+import requests
+
+# set the API endpoint and parameters
+url = "https://newsapi.org/v2/top-headlines?country=us&category=technology"
+params = {"country": "us", "apiKey": "e05f54f819fb43b4b67385072ad1db10"}
+
+# make the API request and retrieve the data
+response = requests.get(url, params=params)
+data = response.json()
+
+# display the data in the Streamlit app with formatting
+
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <h1>Technology News</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.write("Here are the top headlines in tech:")
+for article in data["articles"]:
+        st.write("## " + article["title"])
+        st.write(article["description"])
+        st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
+        st.write(f"URL: {article['url']}")  # Display the source URL
+        st.write("---")
 
 st.markdown(
     "Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
