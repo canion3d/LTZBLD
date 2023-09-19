@@ -140,5 +140,5 @@ if selected == "Upload Model & get Quote":
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
-    st.components.v1.iframe("<!-- UserWidget: QsASt9 --><link href='https://www.treatstock.com/css/embed-user.css' rel='stylesheet' /><div class='ts-embed-tslink'><a href='https://www.treatstock.com/' target='_blank'>Powered by Treatstock</a></div><iframe class='ts-embed-userwidget' src='https://www.treatstock.com/order-upload/widget?userUid=QsASt9' frameborder='0'></iframe>", width=1024,
+    st.components.v1.iframe("https://www.treatstock.com/css/embed-user.css' rel='stylesheet' /><div class='ts-embed-tslink'><a href='https://www.treatstock.com/' target='_blank'>Powered by Treatstock</a></div><iframe class='ts-embed-userwidget' src='https://www.treatstock.com/order-upload/widget?userUid=QsASt9' frameborder='0'></iframe>", width=1024,
                             height=768, scrolling=False)
