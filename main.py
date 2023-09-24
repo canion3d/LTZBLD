@@ -44,7 +44,7 @@ for selected_page in selected_pages:
     except Exception as e:
         st.error(f"An error occurred while loading page '{selected_page}': {e}")
 	    
-st.video("https://www.youtube.com/live/araTysEqGR4?si=cLt1EjOHKixQJWzZ")
+st.video("https://youtu.be/OYvbEGTIzUY")
 
 st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
