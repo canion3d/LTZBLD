@@ -16,22 +16,6 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
-import streamlit as st
-#from st_paywall import add_auth, require_auth
-
-import { TatumSDK, Network, Ethereum, MetaMask } from "@tatumio/tatum";
-
-const tatum = await TatumSDK.init<Ethereum>({ network: Network.ETHEREUM })
-
-const metamaskAccount: string = await tatum.walletProvider
-.use(MetaMask)
-.getWallet()
-
-console.log(metamaskAccount)
-await tatum.destroy();
-
-// Expected outcome - 0xF64E82131BE01618487Da5142fc9d289cbb60E9d
-
 # Display the image centered in the page
 col1, col2, col3 = st.columns(3)
 with col1:
