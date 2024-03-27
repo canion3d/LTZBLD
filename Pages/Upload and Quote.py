@@ -50,5 +50,5 @@ if selected == "Upload Model & get Quote":
 
     st.components.v1.iframe("https://3dviewer.net", width=1024, height=768, scrolling=False)
 
-    st.components.v1.iframe("https://www.treatstock.com/order-upload/widget?userUid=QsASt9", width=1024,
+    st.components.v1.iframe("<!-- Printer: 13472-HALOT-ONE --><link href="https://www.treatstock.com/css/embed-remote.css" rel="stylesheet" /><iframe class="ts-embed-printservice" width="100%" height="650px" src="https://www.treatstock.com/my/print-model3d/widget?posUid=fixedPsPrinter&psPrinterId=13472" frameborder="0"></iframe>", width=1024,
                             height=768, scrolling=True)
