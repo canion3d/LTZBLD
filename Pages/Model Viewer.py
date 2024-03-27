@@ -27,18 +27,6 @@ def load_model(file):
     except Exception as e:
         st.write("Error loading the model:", e)
 
-# File uploader
-st.sidebar.title("Upload 3D Model")
-uploaded_file = st.sidebar.file_uploader("Choose a 3D model", type=["obj", "stl", "vtk"])
-
-if uploaded_file is not None:
-    # Display the uploaded file details
-    st.sidebar.write("Uploaded file:", uploaded_file.name)
-    st.sidebar.write("File type:", uploaded_file.type)
-
-    # Load and display the 3D model
-    load_model(uploaded_file)
-
 # Instructions and example models
 st.sidebar.write("**Instructions:**")
 st.sidebar.write("1. Upload a 3D model file (OBJ, STL, or VTK).")
