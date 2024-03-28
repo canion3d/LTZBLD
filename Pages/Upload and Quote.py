@@ -47,3 +47,9 @@ with st.sidebar:
 if selected == "Upload Model & get Quote":
     st.components.v1.iframe("https://www.treatstock.com/my/print-model3d/widget?posUid=fixedPsPrinter&psPrinterId=13472", width=1024,
                             height=768, scrolling=True)
+    
+    st.components.v1.iframe("https://www.treatstock.com/my/print-model3d/widget?posUid=fixedPsPrinter&psPrinterId=7651", width=1024,
+                            height=768, scrolling=True)
+        
+    st.components.v1.iframe("https://www.treatstock.com/my/print-model3d/widget?posUid=fixedPsPrinter&psPrinterId=11804", width=1024,
+                            height=768, scrolling=True)
