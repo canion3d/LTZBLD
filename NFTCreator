@@ -1,0 +1,20 @@
+// Install with: npm install @tatumio/tatum
+const { TatumSDK, Network } = require("@tatumio/tatum");
+
+(async () => {
+  try {
+    const tatum = await TatumSDK.init({ network: Network.ETHEREUM });
+    const txs = await tatum.nft.createNftCollection({
+      name: 'My NFT Collection',
+      symbol: 'MyNFT',
+      owner: '0x727ea45b2eb6abb2badd3dc7106d146e0dc0450d', // replace with your address
+    });
+    console.log(txs.data.txId);
+    
+    const collectionAddress = await tatum.rpc.getContractAddress(txs.data.txId);
+    console.log(collectionAddress);
+  } catch (error) {
+    console.error("Error creating NFT collection:", error);
+  }
+  process.exit(0); // Ensure the Node.js process exits after execution
+})();
