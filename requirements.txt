@@ -115,10 +115,10 @@ sqlparse==0.4.2
 stack-data==0.3.0
 starlette==0.19.1
 statsmodels==0.13.2
-streamlit==1.11.1
 streamlit-aggrid==0.3.3
 streamlit-echarts==0.4.0
 streamlit-option-menu==0.3.2
+streamlit-extras==0.4.0
 tabulate==0.8.10
 tenacity==8.0.1
 terminado==0.15.0
