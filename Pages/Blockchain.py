@@ -15,44 +15,62 @@ from streamlit_option_menu import option_menu
 from pip._internal import main
 from streamlit_option_menu import option_menu
 
-st.set_page_config(
-    layout = "wide" ,
-    page_icon = "tada"
-)
-
-from moralis import evm_api
-
-api_key = "9E7gJnfD3salEVXsS9WkWPqMjtf7NGMZPj2IsADvwgB5tfxt38Qtio83Slq6tOYJ"
-params = {
-        "address": "0x057Ec652A4F150f7FF94f089A38008f49a0DF88e",
-        "chain": "eth",
-        "to_block": 1.2,
-    }
-
-result = evm_api.balance.get_native_balance(
-        api_key=api_key,
-        params=params,
-    )
-
-print(result)
-
-from web3 import Web3
-
 import streamlit as st
-import numpy as np
+from web3 import Web3
+import requests
 
-# Create an interactive title
-st.title("Blockchain Data Visualization")
+# Initialize a web3 connection to an Ethereum node
+w3 = Web3(Web3.HTTPProvider('import streamlit as st
+from web3 import Web3
+import requests
 
-# Display a sample chart of blockchain data
-st.write("Blockchain data:")
-chart_data = np.random.randn(20, 3)
-st.line_chart(chart_data)
+# Initialize a web3 connection to an Ethereum node
+w3 = Web3(Web3.HTTPProvider('https://mainnet.infura.io/v3/942b8cb3ff0f4d958282d71d85b5a741'))
 
-# Display a sample bar graph of blockchain data
-st.write("Blockchain data:")
-bar_data = np.random.rand(10)
-st.bar_chart(bar_data)
+def get_latest_block_number():
+    return w3.eth.block_number
+
+def get_eth_price():
+    response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+    data = response.json()
+    return data['ethereum']['usd']
+
+def main():
+    st.title('Ethereum Blockchain Statistics')
+
+    # Display the latest block number
+    latest_block = get_latest_block_number()
+    st.write(f'Latest Block Number: {latest_block}')
+
+    # Display the current Ether price
+    eth_price = get_eth_price()
+    st.write(f'Current Ether Price: ${eth_price} USD')
+
+if __name__ == "__main__":
+    main()
+'))
+
+def get_latest_block_number():
+    return w3.eth.block_number
+
+def get_eth_price():
+    response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+    data = response.json()
+    return data['ethereum']['usd']
+
+def main():
+    st.title('Ethereum Blockchain Statistics')
+
+    # Display the latest block number
+    latest_block = get_latest_block_number()
+    st.write(f'Latest Block Number: {latest_block}')
+
+    # Display the current Ether price
+    eth_price = get_eth_price()
+    st.write(f'Current Ether Price: ${eth_price} USD')
+
+if __name__ == "__main__":
+    main()
 
 import streamlit as st
 
