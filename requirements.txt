@@ -136,12 +136,11 @@ tzlocal==4.2
 ujson==5.4.0
 urllib3==1.26.11
 validators==0.20.0
-voila==0.3.6
 watchdog==2.1.9
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.4.1
-websockets==9.1
+websockets==10.0.0
 Werkzeug==2.2.1
 widgetsnbextension==3.6.1
 wsproto==1.2.0
