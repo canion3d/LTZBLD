@@ -22,10 +22,6 @@ import requests
 # Initialize a web3 connection to an Ethereum node
 w3 = Web3(Web3.HTTPProvider('https://goerli.infura.io/v3/942b8cb3ff0f4d958282d71d85b5a741')
 
-response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
-data = response.json()
-return data['ethereum']['usd']
-
 st.title('Ethereum Blockchain Statistics')
 
 # Display the latest block number
