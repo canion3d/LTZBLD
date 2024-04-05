@@ -41,10 +41,6 @@ def main():
     eth_price = get_eth_price()
     st.write(f'Current Ether Price: ${eth_price} USD')
 
-if __name__ == "__main__":
-    main()
-'))
-
 def get_latest_block_number():
     return w3.eth.block_number
 
