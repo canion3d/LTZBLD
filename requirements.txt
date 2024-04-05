@@ -93,7 +93,7 @@ psutil==5.9.1
 pure-eval==0.2.2
 pyarrow==9.0.0
 pycparser==2.21
-pydantic==1.9.2
+pydantic==2.4.0
 pydeck==0.7.1
 pyecharts==1.9.1
 pygame==2.1.2
@@ -148,7 +148,7 @@ XlsxWriter==3.0.3
 yarg==0.1.9
 yfinance==0.1.74
 zipp==3.8.1
-web3==6.16.0
+web3==5.31.0
 ethereum==2.3.2
 pyvista==0.38.5
 st-paywall
