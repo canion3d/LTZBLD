@@ -20,11 +20,6 @@ from web3 import Web3
 import requests
 
 # Initialize a web3 connection to an Ethereum node
-w3 = Web3(Web3.HTTPProvider('import streamlit as st
-from web3 import Web3
-import requests
-
-# Initialize a web3 connection to an Ethereum node
 w3 = Web3(Web3.HTTPProvider('https://mainnet.infura.io/v3/942b8cb3ff0f4d958282d71d85b5a741'))
 
 def get_latest_block_number():
