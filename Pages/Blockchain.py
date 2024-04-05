@@ -22,15 +22,15 @@ import requests
 # Initialize a web3 connection to an Ethereum node
 w3 = Web3(Web3.HTTPProvider('https://goerli.infura.io/v3/942b8cb3ff0f4d958282d71d85b5a741')
 
-def get_latest_block_number():
+    def get_latest_block_number():
     return w3.eth.block_number
 
-def get_eth_price():
+    def get_eth_price():
     response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
     data = response.json()
     return data['ethereum']['usd']
 
-def main():
+    def main():
     st.title('Ethereum Blockchain Statistics')
 
     # Display the latest block number
@@ -41,15 +41,15 @@ def main():
     eth_price = get_eth_price()
     st.write(f'Current Ether Price: ${eth_price} USD')
 
-def get_latest_block_number():
+    def get_latest_block_number():
     return w3.eth.block_number
 
-def get_eth_price():
+    def get_eth_price():
     response = requests.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
     data = response.json()
     return data['ethereum']['usd']
 
-def main():
+    def main():
     st.title('Ethereum Blockchain Statistics')
 
     # Display the latest block number
