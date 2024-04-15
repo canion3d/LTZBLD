@@ -73,7 +73,7 @@ for article in data["articles"]:
 st.markdown(
     "Canion3D Mission Statement: To be a provider across all industries of only the best 3D Printing Products/Services, "
     "providing our customers with the best customer service, building our business at a grassroots level, "
-    "and Using our platform and business success to help those who need the most constructive help. ")
+    "and using our platform and business success to help those who need the most constructive help. ")
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
