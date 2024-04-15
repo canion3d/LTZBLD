@@ -19,6 +19,17 @@ import streamlit as st
 from web3 import Web3
 import requests
 
+url = "https://api.blockspan.com/v1/collections?chain=eth-main&page_size=25"
+
+headers = {
+    "accept": "application/json",
+    "X-API-KEY": "92tWUENVMyncAreMMS6BsQPplLMM54b9"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+
 # Initialize a web3 connection to an Ethereum node
 w3 = Web3(Web3.HTTPProvider('https://goerli.infura.io/v3/942b8cb3ff0f4d958282d71d85b5a741')
 
@@ -87,14 +98,3 @@ def main():
     """
 
     st.components.v1.jscode(jscode)
-
-
-if __name__ == "__main__":
-    main()
-
-st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>", unsafe_allow_html=True)
-
-st.markdown("<h1 style='text-align: center; color: white;'>LTZBLD Blockchain Services</h1>" , unsafe_allow_html = True)
-
-st.markdown("<h1 style='text-align: center; color: white;'>Coming Soon</h1>" , unsafe_allow_html = True)
-
