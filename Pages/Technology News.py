@@ -67,6 +67,11 @@ for article in data["articles"]:
         st.write("## " + article["title"])
         st.write(article["description"])
         st.write(f"Source: {article['source']['name']}  Published: {article['publishedAt']}")
+        if article.get('urlToImage') and article.get('url'):
+        st.markdown(f"<a href='{article['url']}' target='_blank'><img src='{article['urlToImage']}' alt='Image for {article['title']}' style='width:100%;'></a>", unsafe_allow_html=True)
+            elif article.get('urlToImage'):
+                st.image(article['urlToImage'], caption=article['title'])
+            if article.get('url'):
         st.write(f"URL: {article['url']}")  # Display the source URL
         st.write("---")
 
