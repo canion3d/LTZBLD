@@ -45,7 +45,7 @@ st.video("https://youtu.be/OYvbEGTIzUY")
 
 st.markdown("<h1 style='text-align: center; color: black;'>LTZBLD - Let's Build!</h1>", unsafe_allow_html=True)
 
-st.sidebar.image('Canion3D_original-logos_PNG.png', use_column_width=1)
+st.sidebar.image('Create_Your_Own_Culture.jpg', use_column_width=1)
 
 st.markdown("<h2 style='text-align: center; color: white;'>Select a dashboard to get started: </h2>", unsafe_allow_html=True)
 
